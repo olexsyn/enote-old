@@ -1,2 +1,2 @@
-# enote
+# eNote
 Just for notes
