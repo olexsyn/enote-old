@@ -1,0 +1,2 @@
+# enote
+Just for notes
