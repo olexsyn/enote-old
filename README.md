@@ -1,4 +1,4 @@
-# ![logo](i/enote_logo.png) E-Note
+# ![logo](i/enote_logo.png) eNote
 
 > <small>Внимание! Это личная записная книжка. [Отказ от ответственности](disclaimer)</small>
 
