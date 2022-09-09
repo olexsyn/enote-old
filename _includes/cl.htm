@@ -1,0 +1,16 @@
+<pre class="command-line">
+{%- if include.cmd -%}
+	<p class="command">
+	{%- if include.pref -%}
+		<span class="prefix">{{ include.pref }} </span>
+	{%- endif -%}
+	{{ include.cmd }}</p>
+{%- endif -%}
+{%- if include.small -%}
+	<span class="output">{{ include.small }}</span>
+{%- endif -%}
+{%- if include.out -%}
+	{{ include.out }}
+{%- endif -%}
+</pre>
+
