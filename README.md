@@ -13,7 +13,7 @@
 - [Hardware](hardware)
 - [HTML](html)
 - [Linux](linux)
-- [MySQL](mysql2)
+- [MySQL](mysql)
 - [Perl](perl)
 - [Python](python)
 - [Security](security)
