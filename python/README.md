@@ -109,6 +109,14 @@ os._exit(code)  # code - необходим!
 [подробнее](exit)
 
 
+## Віртуальне оточення
+
+    python3 -m venv .env
+    source .env/bin/activate
+
+[докладніше](virtualenv)
+
+
 ## Ошибки
 
 * `malformed header from script 'script.py': Bad header: NameError, referer: http://...`
