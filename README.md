@@ -1,6 +1,6 @@
 # ![logo](i/enote_logo.png) eNote
 
-> <small>Внимание! Это личная записная книжка. [Отказ от ответственности](disclaimer)</small>
+> <small>Увага! Це особистий записник. [Відмова від відповідальності](disclaimer)</small>
 
 - [Apache](apache)
 - [Nginx](nginx)
