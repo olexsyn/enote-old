@@ -6,6 +6,7 @@
 
 - {% include a.htm url="https://pythonru.com/osnovy/stroki-python" text="Строки в python 3: методы, функции, форматирование" %}
 - [Форматування виводу](output-formatting)
+- [Округлення чисел та його особливості](numbers_rounding)
 - {% include a.htm url="https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format" text="Форматирование строк с помощью format()" %}
 - {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
 - [Ведущие нули](strings/leading_zeros/)
