@@ -50,7 +50,7 @@ def cval(shit, addr):
     row = int(row) - 1   # в модулі xlrd рядки починаються з нуля 0
 
     val = shit.cell_value(rowx=row, colx=col)
-    # return dict( rowx=row, colx=col )
+
     return val
 
 book = xlrd.open_workbook("1234.xls")
