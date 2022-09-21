@@ -46,8 +46,8 @@ def cval(shit, addr):
     else:
         return None
 
-    col = ord(col) - 65
-    row = int(row) - 1
+    col = ord(col) - 65  # 65 - це код латинської літери 'A', в модулі xlrd стовпчик 'A' == 0
+    row = int(row) - 1   # в модулі xlrd рядки починаються з нуля 0
 
     val = shit.cell_value(rowx=row, colx=col)
     # return dict( rowx=row, colx=col )
