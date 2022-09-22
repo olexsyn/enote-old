@@ -72,12 +72,16 @@
 
 ```json
 {
-{
+    "bold_folder_labels": true,
+    "default_line_ending": "unix",
+    "detect_indentation": true,
+    "draw_white_space": "all",
     // "font_face": "Droid Sans Mono Regular",
     "font_face": "JetBrains Mono",
-    "font_size": 14,
+    "font_size": 13,
     "theme": "Default Dark.sublime-theme",
     "color_scheme": "Mariana.sublime-color-scheme",
+    "ignored_packages": ["Vintage",],
 
     // Стовпці для відображення вертикальних лінійок
     "rulers": [80,],
@@ -94,6 +98,15 @@
     // стовпець, а не ширину вікна. Перегляньте "wrap_width_style" для
     // додаткових параметрів.
     "wrap_width": 0,
+
+    "show_definitions": false,
+    "sidebar_size_13": true,
+    "tabs_small": true,
+    "margin": 0,
+    "move_to_limit_on_up_down": true,
+    "predawn_findreplace_small": true,
+    "predawn_tabs_small": true,
+
 
     // Додає пробіли до першої відкритої дужки під час відступу. Потрібно ввімкнути auto_indent.
     "indent_to_bracket": true,
