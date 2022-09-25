@@ -15,7 +15,7 @@
 - [Как проверить какие модули Python установлены](which_modules)
 - [Зачем использовать python -m pip](https://habr.com/ru/company/otus/blog/475392/)
 
-- [xlrd](xlrd) - читання Excel-файлів старого типу `.xls`
+- [xlrd, xlwt](xlrd_xlwt) - Читання xlrd та запис xlwt Excel-файлів старого типу `.xls`
 - [Jinja2](jinja) - шаблонизатор
 - [BeautifulSoup](beautifulsoup) - разбор HTML кода
 - [Scrapy](https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3)
