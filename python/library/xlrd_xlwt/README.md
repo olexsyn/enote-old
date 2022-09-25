@@ -1,4 +1,4 @@
-# xlrd читання Excel-файлів старого типу `.xls`
+# Читання xlrd та запис xlwt Excel-файлів старого типу `.xls`
 
 <https://xlrd.readthedocs.io/>  
 <https://xlwt.readthedocs.io/>  
