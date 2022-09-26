@@ -13,6 +13,7 @@
 
 ### Списки
 
+- [Ініціалізація](initialize)
 - [Функции any и all](list/any_all/)
 - [Функции sum, min и max](list/sum_min_max/)
 - [Метод списка list.sort() и функция sorted()](list/sort_sorted)
