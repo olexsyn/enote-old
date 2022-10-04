@@ -46,7 +46,8 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 - **-keyout**: эта строка указывает OpenSSL, где мы разместим создаваемый закрытый ключ.
 - **-out**: данный параметр указывает OpenSSL, куда поместить создаваемый сертификат.
 
-{% include cl.htm small="[sudo] password for olex: 
+```
+[sudo] password for olex: 
 Can't load /home/olex/.rnd into RNG
 140352258798016:error:2406F079:random number generator:RAND_load_file:Cannot open 
 file:../crypto/rand/randfile.c:88:Filename=/home/olex/.rnd
@@ -60,7 +61,8 @@ into your certificate request.
 What you are about to enter is what is called a Distinguished Name or a DN.
 There are quite a few fields but you can leave some blank
 For some fields there will be a default value,
-If you enter '.', the field will be left blank." %}
+If you enter '.', the field will be left blank.
+```
 
 Как мы указывали выше, эти опции создают и файл ключа, и сертификат. Нам будет задано несколько вопросов о нашем сервере, чтобы правильно вставить информацию в сертификат.
 
@@ -68,13 +70,15 @@ If you enter '.', the field will be left blank." %}
 
 В целом, диалог выглядит примерно так:
 
-{% include cl.htm small="Country Name (2 letter code) [AU]:UA
+```
+Country Name (2 letter code) [AU]:UA
 State or Province Name (full name) [Some-State]:Kyiv Obl.
 Locality Name (eg, city) []:Kyiv
 Organization Name (eg, company) [Internet Widgits Pty Ltd]:Auto.Kazka  
 Organizational Unit Name (eg, section) []:OlexSyn        
 Common Name (e.g. server FQDN or YOUR name) []:auto.kazka.org.ua.loc
-Email Address []:myemail@gmail.com" %}
+Email Address []:myemail@gmail.com
+```
 
 Оба созданных вами файла будут помещены в соответствующие подкаталоги в каталоге /etc/ssl:
 - `/etc/ssl/private/apache-autokazka.key`  (эта директория закрыта, зайти можно только под root'ом)
@@ -230,7 +234,7 @@ sudo systemctl restart apache2
 
 Откройте браузер и введите https:// и доменное имя или IP-адрес вашего сервера в адресную панель:
 
-{% include a.htm url="https://auto.kazka.org.ua.loc" %}
+<https://auto.kazka.org.ua.loc>
 
 <a name="browser_features"></a>
 ### Особенности поведения браузера в случае с самоподписанным сертификатом]

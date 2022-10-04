@@ -34,8 +34,7 @@ rm -rf ./dir1
 
 
 ```
-"mkdir -pv ./dir1/dir2/dir3"
-small="
+mkdir -pv ./dir1/dir2/dir3
 mkdir: created directory './dir1'
 mkdir: created directory './dir1/dir2'
 mkdir: created directory './dir1/dir2/dir3'
@@ -52,8 +51,7 @@ mkdir -m777 public
 
 
 ```
-"ls -lah"
-small="
+ls -lah
 total 16K
 drwxrwxr-x  4 olex olex 4,0K 20-02-23 ./
 drwxr-xr-x 38 olex olex 4,0K 20-02-22 ../
@@ -65,8 +63,7 @@ drwxrwxrwx  2 olex olex 4,0K 20-02-23 public/
 
 
 ```
-"mkdir -pv ./one/{two1,two2,two3}/three"
-small="
+mkdir -pv ./one/{two1,two2,two3}/three
 mkdir: created directory './one'
 mkdir: created directory './one/two1'
 mkdir: created directory './one/two1/three'
@@ -87,8 +84,7 @@ rm -rf ~/temp/*
 
 
 ```
-"mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}"
-small="
+mkdir -pv ./one/{two1,two2,two3}/{th1,th2,th3}
 mkdir: created directory './one'
 mkdir: created directory './one/two1'
 mkdir: created directory './one/two1/th1'
@@ -109,8 +105,7 @@ mkdir: created directory './one/two3/th3'
 
 
 ```
-"rm -rfv one/{two1,two2,two3}"
-small="
+rm -rfv one/{two1,two2,two3}
 removed directory 'one/two1/th2'
 removed directory 'one/two1/th1'
 removed directory 'one/two1/th3'
@@ -128,8 +123,7 @@ removed directory 'one/two3'
 
 
 ```
-"ls -lah"
-small="
+ls -lah
 total 12
 drwxrwxr-x  3 olex olex 4096 20-02-23 ./
 drwxr-xr-x 38 olex olex 4096 20-02-22 ../

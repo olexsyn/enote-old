@@ -24,8 +24,9 @@ try:
  print('ignoring exit')
 ...
 ```
-{% include cl.htm small="ignoring exit" %}
-
+```
+ignoring exit
+```
 
 
 ## Завершение программ средствами модуля os

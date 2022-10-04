@@ -4,8 +4,7 @@
 
 Основне використання:
 
-{% include cl.htm pref="$"
-cmd="tail -f /logs/site/error.log" %}
+    tail -f /logs/site/error.log
 
 Виводить та оновлює на екрані останні рядки вказаного файлу.
 

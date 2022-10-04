@@ -7,40 +7,44 @@
 
 [сбросить и снова включить своп](swap): <span class="warn">TODO!</span>
 
-{% include cl.htm
-cmd="sudo swapoff -a
-sudo swapon -a" %}
+```
+sudo swapoff -a
+sudo swapon -a
+```
 
 [установить разрешения на каталоги и файлы](chmod_chown_r): <span class="warn">TODO!</span>
 
-{% include cl.htm
-cmd="find ./catalog -type d -exec chmod 755 {} \;
-find ./catalog -type f -exec chmod 644 {} \;" %}
+```
+find ./catalog -type d -exec chmod 755 {} \;
+find ./catalog -type f -exec chmod 644 {} \;
+```
 
 [Создать и разархивировать tgz-архив](tar): <span class="warn">TODO!</span>
 
-{% include cl.htm
-cmd="tar -czf pages.tgz ./pages
-tar -xzf pages.tgz" %}
+```
+tar -czf pages.tgz ./pages
+tar -xzf pages.tgz
+```
 
 Несколько способов создать текстовый файл (пустой, с пустой строкой, с текстом):
 
-{% include cl.htm
-cmd='touch filename.ext
+```
+touch filename.ext
 echo > filename.ext
-echo "Some text" > filename.ext' %}
+echo "Some text" > filename.ext
+```
 
 Варианты создать текстовый файл с определенным текстом:
 
-{% include cl.htm
-cmd="cat > filename.ext"
+```
+cat > filename.ext"
 
-Some text" %}
+Some text
+```
 
 <kbd>Ctrl</kbd> + <kbd>D</kbd> - для сохранения и завершения редактирования.
 
-{% include cl.htm
-cmd="nano filename.ext" %}
+    nano filename.ext
 
 <kbd>Ctrl</kbd> + <kbd>O</kbd>, <kbd>Enter</kbd> - сохранить,
 <kbd>Ctrl</kbd> + <kbd>X</kbd> - выйти из редактора

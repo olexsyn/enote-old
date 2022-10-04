@@ -12,8 +12,7 @@ cd /etc/apt/sources.list.d
 
 
 ```
-"ls -la"
-small="
+ls -la
 total 48
 drwxr-xr-x 2 root root 4096 бер 31 23:38 .
 drwxr-xr-x 7 root root 4096 бер 31 23:39 ..
@@ -31,8 +30,6 @@ drwxr-xr-x 7 root root 4096 бер 31 23:39 ..
 
 
 ```
-"cat sublime-text.list"
-
-
+cat sublime-text.list
 deb https://download.sublimetext.com/ apt/stable/
 ```
