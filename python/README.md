@@ -88,7 +88,7 @@ if __name__ == '__main__':
 - [Creating PDF Reports with Pandas, Jinja and WeasyPrint](https://pbpython.com/pdf-reports.html)
 
 - [Форма + AJAX](form_ajax)
-- {% include a.htm url="https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html" text="" %}
+- [Вывод цветного текста](https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html)
 - [Локализация приложений на Python](localization)
 
 - [Отправка e-mail](email)
