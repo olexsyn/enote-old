@@ -12,15 +12,20 @@
 
 Якщо у вас немає пари відкритих і закритих ключів або ви не хочете використовувати будь-які доступні для підключення до GitHub, то згенеруйте новий ключ SSH, використовуючи свій e-mail як ідентифікатор:
 
-{% include cl.htm cmd='ssh-keygen -t ed25519 -C "nickname@example.com"' %}
+
+```
+'ssh-keygen -t ed25519 -C "nickname@example.com"' %}
 
 > Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:  
 > `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
 У вас буде запитано ім'я файлу (треба вводити повний шлях, бажано у `/home/user/.ssh/`), та пароль
 
-{% include cl.htm cmd='ssh-keygen -t ed25519 -C "nickname@example.com"'
-out="Generating public/private ed25519 key pair.
+
+```
+'ssh-keygen -t ed25519 -C "nickname@example.com"'
+
+Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/user/.ssh/id_ed25519): /home/user/.ssh/nickname
 Created directory '/home/user/.ssh'.
 Enter passphrase (empty for no passphrase):
@@ -30,7 +35,8 @@ Your public key has been saved in /home/user/.ssh/nickname.pub
 The key fingerprint is:
 SHA256:DALKyEu8zwu08jo3gPcUVjmrjOXpP4wSUy27jQHNKf5 nickname@example.com
 The key's randomart image is:
-..." %}
+...
+```
 
 ## Додавання нового ключа SSH до вашого облікового запису GitHub
 
@@ -57,23 +63,37 @@ The key's randomart image is:
 
 Відкрийте термінал. Перейдіть у свій свій локальний git-проект:
 
-{% include cl.htm cmd="cd path/to/REPOSITORY" %}
+
+```
+cd path/to/REPOSITORY
+```
+
 
 Отримайте список посилань на віддалений репозиторій.
 Перевіяємо, що поточний протокол **HTTP**: `origin  https:// ...`, який ми хочемо змінити:
 
-{% include cl.htm cmd="git remote -v"
-out="&gt; origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+
+```
+"git remote -v"
+
+&gt; origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 &gt; origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
 
 Змінюємо протокол:
 
-{% include cl.htm cmd="git remote set-url origin git@github.com:USERNAME/REPOSITORY.git" %}
+
+```
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+```
+
 
 Перевіряемо, що протокол змінився на **GIT**: `origin  git@github.com:`
 
-{% include cl.htm cmd="git remote -v"
-out="&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+
+```
+"git remote -v"
+
+&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
 &gt; origin  git@github.com:USERNAME/REPOSITORY.git (push)" %}
 
 Якщо раніше вводилася безпечна фраза-пароль, її може буде запитано під час команд `git pull`, `git push` і `git merge`.
@@ -87,10 +107,14 @@ out="&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
 
 Запустіть ssh-агент у фоновому режимі.
 
-{% include cl.htm cmd='eval "$(ssh-agent -s)"'
+
+```
+'eval "$(ssh-agent -s)"'
 out='&gt; Агент pid 59566' %}
 
 Додайте свій закритий (приватний) ключ SSH до ssh-agent:
 
-{% include cl.htm cmd='ssh-add ~/.ssh/nickname' %}
+
+```
+'ssh-add ~/.ssh/nickname' %}
 

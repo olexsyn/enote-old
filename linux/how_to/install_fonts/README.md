@@ -9,4 +9,8 @@
 
 і запустіть:
 
-{% include cl.htm cmd="fc-cache -f -v" %}
+
+```
+fc-cache -f -v
+```
+

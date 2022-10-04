@@ -74,7 +74,8 @@ Create_tablespace_priv: Y
 
 {% include cl.htm
 cmd="[mysql]> pager less -S"
-out="PAGER set to 'less -S'" %}
+
+PAGER set to 'less -S'" %}
 
 {% include cl.htm
 cmd="[mysql]> select * from user" %}
@@ -84,4 +85,5 @@ cmd="[mysql]> select * from user" %}
 
 {% include cl.htm
 cmd="[mysql]> nopager"
-out="PAGER set to stdout" %}
+
+PAGER set to stdout" %}

@@ -4,22 +4,35 @@
 
 ## Install
 
-{% include cl.htm cmd="pip3 install Jinja2"
-out="...
+
+```
+"pip3 install Jinja2"
+
+...
 Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
 
 На сервере, где установлено окружение (напр. python3.7), необходимо добавить опцию `--user`:
 
-{% include cl.htm cmd="which pip3.7"
-out="/usr/local/bin/pip3.7" %}
 
-{% include cl.htm cmd="pip3.7 install Jinja2"
-out="...
+```
+which pip3.7
+/usr/local/bin/pip3.7
+```
+
+
+
+```
+"pip3.7 install Jinja2"
+
+...
 Could not install packages due to an EnvironmentError: [Errno 13] Permission denied...
 Consider using the `--user` option or check the permissions." %}
 
-{% include cl.htm cmd="pip3.7 install --user Jinja2"
-out="...
+
+```
+"pip3.7 install --user Jinja2"
+
+...
 Installing collected packages: MarkupSafe, Jinja2
 Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
 

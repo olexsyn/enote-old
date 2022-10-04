@@ -47,7 +47,12 @@ if __name__ ##### '__main__': bye()
 ```
 {% endraw %}
 
-{% include cl.htm cmd="python3 modul_bye.py" out="Bye world" %}
+
+```
+python3 modul_bye.py" 
+Bye world
+```
+
 
 
 В отличие от **sys.exit**, функция **os.\_exit** неуязвима для инструкций обработки исключений `try/except` и `try/finally`:
@@ -62,7 +67,12 @@ except:
     print('This text will be ignored')
 ```
 
-{% include cl.htm cmd="python3 bye_try_exc.py" out="Bye world" %}
+
+```
+python3 bye_try_exc.py" 
+Bye world
+```
+
 
 `bye_try_fin.py`
 ```python
@@ -74,7 +84,12 @@ finally:
     print('This text will be ignored')
 ```
 
-{% include cl.htm cmd="python3 bye_try_fin.py" out="Bye world" %}
+
+```
+python3 bye_try_fin.py" 
+Bye world
+```
+
 
 
 ## Повышаем надежность с contextlib

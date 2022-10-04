@@ -29,7 +29,11 @@
 
 Мы можем создать самоподписанный ключ и пару сертификатов OpenSSL с помощью одной команды:
 
-{% include cl.htm cmd="sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-autokazka.key -out /etc/ssl/certs/apache-autokazka.crt" %}
+
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-autokazka.key -out /etc/ssl/certs/apache-autokazka.crt
+```
+
 
 Прежде чем перейти к этому шагу, посмотрим, что делает отправляемая нами команда:
 
@@ -94,7 +98,11 @@ Email Address []:myemail@gmail.com" %}
 
 Создайте новый сниппет в каталоге /etc/apache2/conf-available. Мы назовем файл ssl-params.conf, чтобы сделать его назначение очевидным:
 
-{% include cl.htm cmd="sudo nano /etc/apache2/conf-available/ssl-params.conf" %}
+
+```
+sudo nano /etc/apache2/conf-available/ssl-params.conf
+```
+
 
 Для наших целей мы скопируем предоставленные настройки полностью. Мы внесем только одно небольшое изменение. Мы отключим заголовок Strict-Transport-Security (HSTS).
 
@@ -184,23 +192,35 @@ SSLSessionTickets Off
 
 Мы можем активровать `mod_ssl` и `mod_headers` - модули Apache, необходимые для некоторых настроек нашего сниппета SSL, с помощью команды `a2enmod`:
 
-{% include cl.htm cmd="sudo a2enmod ssl
+
+```
+"sudo a2enmod ssl
 sudo a2enmod headers
-" %}
+```
 Теперь мы можем активировать сниппет SSL и сам виртуальный хост (если не сделали этого раньше) с помощью команды a2ensite:
 
-{% include cl.htm cmd="sudo a2enconf ssl-params
+
+```
+"sudo a2enconf ssl-params
 sudo a2ensite auto_kazka_org_ua
-" %}
+```
  
 Мы активировали наш сайт и все необходимые модули. Теперь нам нужно проверить наши файлы на наличие ошибок в синтаксисе. Для этого можно ввести следующую команду:
 
-{% include cl.htm cmd="sudo apache2ctl configtest"
-out="Syntax OK" %}
+
+```
+sudo apache2ctl configtest
+Syntax OK
+```
+
 
 Если в конфигурации нет синтаксических ошибок, мы можем безопасно перезапустить Apache для внесения изменений:
 
-{% include cl.htm cmd="sudo systemctl restart apache2" %}
+
+```
+sudo systemctl restart apache2
+```
+
 
 
 <a name="check_ssl"></a>

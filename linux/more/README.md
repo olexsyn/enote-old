@@ -1,7 +1,10 @@
 # more
 
-{% include cl.htm cmd="more --help"
-out="Usage:
+
+```
+"more --help"
+
+Usage:
  more [options] <file>...
 
 A file perusal filter for CRT viewing. / Фільтр перегляду файлів на екрані
@@ -23,4 +26,4 @@ Options:
  -V, --version         display version
 
 For more details see more(1).
-" %}
+```

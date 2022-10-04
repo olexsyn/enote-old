@@ -8,7 +8,11 @@ https://userbase.kde.org/Gwenview/uk
 
 ## Встановлення
 
-{% include cl.htm cmd="sudo apt install gwenview" %}
+
+```
+sudo apt install gwenview
+```
+
 
 Якщо ваше оточення не KDE, будьте готові, що разом з Gwenview буде встановлено багато KDE-бібліотек, необхідних для фунціювання програми.
 
@@ -39,13 +43,20 @@ https://userbase.kde.org/Gwenview/uk
 
 Спочатку треба з'ясувати, яку назву вона має у вашому оточенні:
 
-{% include cl.htm cmd="apt search kimageformat"
-out="<b>kimageformat-plugins</b>/jammy,now 5.92.0-0ubuntu1 amd64 [installed]
+
+```
+"apt search kimageformat"
+
+<b>kimageformat-plugins</b>/jammy,now 5.92.0-0ubuntu1 amd64 [installed]
   Додаткові втулки форматів зображень для QtGui" %}
 
 наприклад, в Ubuntu ця бібліотека має назву **kimageformat-plugins**. І встановити її:
 
-{% include cl.htm cmd="sudo apt install kimageformat-plugins" %}
+
+```
+sudo apt install kimageformat-plugins
+```
+
 
 Після встановлення, також і Okular (переглядач .PDF з KDE), почав відкривати файли, створені Photoshop.
 

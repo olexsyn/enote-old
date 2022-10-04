@@ -34,7 +34,8 @@ echo "Some text" > filename.ext' %}
 
 {% include cl.htm
 cmd="cat > filename.ext"
-out="Some text" %}
+
+Some text" %}
 
 <kbd>Ctrl</kbd> + <kbd>D</kbd> - для сохранения и завершения редактирования.
 

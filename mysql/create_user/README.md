@@ -12,7 +12,8 @@ Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 47
 Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
-..." %}
+...
+```
 
 Якщо система налаштована на вхід без паролю:
 
@@ -20,7 +21,8 @@ Server version: 10.1.47-MariaDB-0ubuntu0.18.04.1 Ubuntu 18.04
 small="Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 8
 Server version: 8.0.29-0ubuntu0.22.04.2 (Ubuntu)
-..." %}
+...
+```
 
 ## Створення бази даних
 

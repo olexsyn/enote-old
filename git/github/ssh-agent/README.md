@@ -4,18 +4,29 @@
 
 Запустіть ssh-agent у фоновому режимі (без "sudo"):
 
-{% include cl.htm cmd='eval "$(ssh-agent -s)"'
-out="> Agent pid 59566" %}
+
+```
+'eval "$(ssh-agent -s)"'
+
+> Agent pid 59566" %}
 
 Додайте свій закритий SSH-ключ  до ssh-agent'a:
 
-{% include cl.htm cmd="$ ssh-add ~/.ssh/MY_PRIVATE_KEY" %}
+
+```
+$ ssh-add ~/.ssh/MY_PRIVATE_KEY
+```
+
 
 ## Вбити агента
 
 Коли ви закінчите сеанс терміналу, ви можете завершити роботу ssh-agent з прапором **kill** - `-k`:
 
-{% include cl.htm cmd="$ ssh-agent -k" %}
+
+```
+$ ssh-agent -k
+```
+
 
 Як пояснено в ssh-agent посібнику:
 
@@ -27,7 +38,11 @@ out="> Agent pid 59566" %}
 
 Крім того, він може призначити необов'язковий параметр очікування, наприклад, так:
 
-{% include cl.htm cmd="$ ssh-add -t &lt;timeout&gt;" %}
+
+```
+$ ssh-add -t &lt;timeout&gt;
+```
+
 
 де `<timeout>` має формат `<n>h` для _n_ годин, `<n>m` для _n_ хвилин, і так далі.
 

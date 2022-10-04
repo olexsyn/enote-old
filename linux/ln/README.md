@@ -2,15 +2,27 @@
 
 ## Стисло:
 
-{% include cl.htm cmd="ln -s /home/user/doc/real_file.ext /home/user/articles/symlink_to_real_file.ext" %}
+
+```
+ln -s /home/user/doc/real_file.ext /home/user/articles/symlink_to_real_file.ext
+```
+
 
 Якщо не вказати ім'я сімлінка, то він створиться з тією ж назвою, що у реального файла:
 
-{% include cl.htm cmd="ln -s /home/user/doc/real_file.ext /home/user/articles/" %}
+
+```
+ln -s /home/user/doc/real_file.ext /home/user/articles/
+```
+
 
 Також можна робити лінки на директорії:
 
-{% include cl.htm cmd="ln -s /work/www(_real) /home/user/www(_link)" %}
+
+```
+ln -s /work/www(_real) /home/user/www(_link)
+```
+
 
 
 ## Детально:

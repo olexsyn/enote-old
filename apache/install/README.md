@@ -1,6 +1,10 @@
 # Установка и настройка Apache
 
-{% include cl.htm cmd="sudo apt install apache2" %}
+
+```
+sudo apt install apache2
+```
+
 
 ## Модули
 
@@ -8,11 +12,19 @@
 
 ### Подключить возможность обрабатывать инструкции SSI
 
-{% include cl.htm cmd="sudo a2enmod include" %}
+
+```
+sudo a2enmod include
+```
+
 
 ### Подключить mod_rewrite
 
-{% include cl.htm cmd="sudo a2enmod rewrite" %}
+
+```
+sudo a2enmod rewrite
+```
+
 
 ## Скрипты / Динамический контент
 
@@ -23,7 +35,11 @@ Lisp...
 
 ### Подключить возможность выполнять CGI-скрипты:
 
-{% include cl.htm cmd="sudo a2enmod cgi" %}
+
+```
+sudo a2enmod cgi
+```
+
 
 ## Подключить виртуальный хост
 

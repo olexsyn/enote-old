@@ -4,9 +4,15 @@
 
 {% include a.htm url="https://debian-handbook.info/browse/ru-RU/stable/apt.html#sect.apt-sources.list" text="См. подробнее" %}
 
-{% include cl.htm cmd="cd /etc/apt/sources.list.d" %}
 
-{% include cl.htm cmd="ls -la"
+```
+cd /etc/apt/sources.list.d
+```
+
+
+
+```
+"ls -la"
 small="
 total 48
 drwxr-xr-x 2 root root 4096 бер 31 23:38 .
@@ -21,9 +27,12 @@ drwxr-xr-x 7 root root 4096 бер 31 23:39 ..
 -rw-r--r-- 1 root root   50 бер 22  2020 sublime-text.list
 -rw-r--r-- 1 root root 1201 гру 14 16:30 teamviewer.list
 -rw-r--r-- 1 root root  132 бер 31  2018 teejee2008-ubuntu-ppa-bionic.list
-" %}
+```
 
-{% include cl.htm cmd="cat sublime-text.list"
-out="
+
+```
+"cat sublime-text.list"
+
+
 deb https://download.sublimetext.com/ apt/stable/
-" %}
+```

@@ -17,19 +17,30 @@
 Можна вказати повний шлях до каталогу, наприклад:
 У наступному прикладі буде спроба видалення каталогу `dir1`, що знаходиться в каталозі `/tmp`.
 
-{% include cl.htm cmd="<b>rmdir</b> /tmp/dir1" %}
+
+```
+<b>rmdir</b> /tmp/dir1
+```
+
 
 Ви також можете видалити каталог та всі його каталоги за допомогою опції `-p`.
 
-{% include cl.htm cmd="<b>rmdir</b> -p /tmp/dir1" %}
+
+```
+<b>rmdir</b> -p /tmp/dir1
+```
+
 
 У цьому прикладі буде спроба видалення каталогу `dir1`, що знаходиться в каталозі `/tmp`. Якщо спроба вдасться, команда спробує видалити `/tmp`. Робота **rmdir** буде продовжуватися доти, доки не виникне помилка або не буде видалено все вказане дерево.
 
 
 ## rmdir --help
 
-{% include cl.htm cmd="<b>rmdir</b> --help"
-out="Usage: rmdir [OPTION]... DIRECTORY...
+
+```
+"<b>rmdir</b> --help"
+
+Usage: rmdir [OPTION]... DIRECTORY...
 Remove the DIRECTORY(ies), if they are empty.
 
       --ignore-fail-on-non-empty
@@ -44,7 +55,7 @@ Remove the DIRECTORY(ies), if they are empty.
 GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
 Full documentation at: <http://www.gnu.org/software/coreutils/rmdir>
 or available locally via: info '(coreutils) rmdir invocation'
-" %}
+```
 
 
 ## Див. також:

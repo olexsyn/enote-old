@@ -2,7 +2,9 @@
 
 например, посмотреть значение `TXT`-записи `_acme-challenge` для домена **example.com**:
 
-{% include cl.htm cmd="dig txt _acme-challenge.example.com"
+
+```
+"dig txt _acme-challenge.example.com"
 small='...
 ;; ANSWER SECTION:
 _acme-challenge.swim.org.ua. 3600 IN	TXT	"ykaOuGpYzhEHIq2TF1-0GWUpUqF1roF7gd66TC7a_iM"
@@ -10,7 +12,11 @@ _acme-challenge.swim.org.ua. 3600 IN	TXT	"ykaOuGpYzhEHIq2TF1-0GWUpUqF1roF7gd66TC
 
 ## Help
 
-{% include cl.htm cmd="dig -h" %}
+
+```
+dig -h
+```
+
 
 ## Links
 

@@ -26,8 +26,11 @@
 
 ## unlink --help
 
-{% include cl.htm cmd="<b>unlink</b> --help"
-out="Usage: unlink FILE
+
+```
+"<b>unlink</b> --help"
+
+Usage: unlink FILE
   or:  unlink OPTION
 Call the unlink function to remove the specified FILE.
 
@@ -37,7 +40,7 @@ Call the unlink function to remove the specified FILE.
 GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
 Full documentation at: <http://www.gnu.org/software/coreutils/unlink>
 or available locally via: info '(coreutils) unlink invocation'
-" %}
+```
 
 
 ## Див. також:
