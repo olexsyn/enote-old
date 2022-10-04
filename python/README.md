@@ -4,10 +4,10 @@
 
 ### Строки
 
-- {% include a.htm url="https://pythonru.com/osnovy/stroki-python" text="Строки в python 3: методы, функции, форматирование" %}
+- [Строки в python 3: методы, функции, форматирование](https://pythonru.com/osnovy/stroki-python)
 - [Форматування виводу](output-formatting)
-- {% include a.htm url="https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format" text="Форматирование строк с помощью format()" %}
-- {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
+- [Форматирование строк с помощью format()](https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format)
+- [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python)
 - [Ведущие нули](leading_zeros/)
 
 ### Списки
@@ -19,7 +19,7 @@
 
 ### Словари
 
-{% include a.htm url="https://pythobyte.com/how-to-merge-two-dictionaries-in-python-48547651/" text="Как объединить два словаря в Python" %}
+[Как объединить два словаря в Python](https://pythobyte.com/how-to-merge-two-dictionaries-in-python-48547651/)
 
 
 
@@ -74,18 +74,18 @@ if __name__ == '__main__':
 ---
 
 
-- {% include a.htm url="https://pythonru.com/osnovy/znachenija-iskljuchenij-i-oshibok-v-python" text="Обработка ошибок и исключений" %}
-- {% include a.htm url="https://pythonworld.ru/tipy-dannyx-v-python/isklyucheniya-v-python-konstrukciya-try-except-dlya-obrabotki-isklyuchenij.html" text="Конструкция try - except для обработки исключений" %}
+- [Обработка ошибок и исключений](https://pythonru.com/osnovy/znachenija-iskljuchenij-i-oshibok-v-python)
+- [Конструкция try - except для обработки исключений](https://pythonworld.ru/tipy-dannyx-v-python/isklyucheniya-v-python-konstrukciya-try-except-dlya-obrabotki-isklyuchenij.html)
 
 ---
 
-- {% include a.htm url="https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python" text="Как использовать модуль datetime" %}
-- {% include a.htm url="https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html" text="Цветной вывод текста в Python" %}
-- {% include a.htm url="https://pythonru.com/primery/asinhronnost-python-na-primere" text="Асинхронность python на примере asyncio" %}
-- {% include a.htm url="https://proglib.io/p/python-docs/" text="Работа с документацией в Python: поиск информации и соглашения" %}
-- {% include a.htm url="https://habr.com/ru/post/417783/" text="Списки VS кортежи. Оптимизации" %}
-- {% include a.htm url="https://ru.stackoverflow.com/questions/460207/%D0%95%D1%81%D1%82%D1%8C-%D0%BB%D0%B8-%D0%B2-python-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-switch-case" text="Есть ли в Python оператор switch case?" %}
-- {%  include a.htm url="https://pbpython.com/pdf-reports.html" text="Creating PDF Reports with Pandas, Jinja and WeasyPrint" %}
+- [Как использовать модуль datetime](https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python)
+- [Цветной вывод текста в Python](https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html)
+- [Асинхронность python на примере asyncio](https://pythonru.com/primery/asinhronnost-python-na-primere)
+- [Работа с документацией в Python: поиск информации и соглашения](https://proglib.io/p/python-docs/)
+- [Списки VS кортежи. Оптимизации](https://habr.com/ru/post/417783/)
+- [Есть ли в Python оператор switch case?](https://ru.stackoverflow.com/questions/460207/%D0%95%D1%81%D1%82%D1%8C-%D0%BB%D0%B8-%D0%B2-python-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-switch-case)
+- [Creating PDF Reports with Pandas, Jinja and WeasyPrint](https://pbpython.com/pdf-reports.html)
 
 - [Форма + AJAX](form_ajax)
 - {% include a.htm url="https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html" text="" %}

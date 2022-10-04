@@ -1,8 +1,8 @@
 # Работа с файлами
 
-- {% include a.htm url="https://pyneng.readthedocs.io/ru/latest/book/07_files/index.html" text="Python для сетевых инженеров. Работа с файлами" %}
-- {% include a.htm url="https://pythonru.com/osnovy/fajly-v-python-vvod-vyvod" text="Файлы в python, ввод-вывод" %}
-- {% include a.htm url="https://tproger.ru/articles/files-in-python/" text="Основы работы с файлами в Python" %}
+- [Python для сетевых инженеров. Работа с файлами](https://pyneng.readthedocs.io/ru/latest/book/07_files/index.html)
+- [Файлы в python, ввод-вывод](https://pythonru.com/osnovy/fajly-v-python-vvod-vyvod)
+- [Основы работы с файлами в Python](https://tproger.ru/articles/files-in-python/)
 
 ## Обычно
 
