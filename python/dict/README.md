@@ -195,6 +195,27 @@ KeyError: 'popitem(): dictionary is empty'
 {}
 ```
 
+### Перегорнути словник
 
-{% include f.htm f="create.md" %}
+```python
+ip_dict = dict(
+    '1.2.3.4' = 'server_1',
+    '2.3.4.5' = 'server_2',
+)
+ip_dict = {v:k for k,v in ip_dict.items()}
+
+print(ip_dict)
+```
+_output:_
+```
+{'server_1':'1.2.3.4','server_2':'2.3.4.5',}
+```
+
+---
+
+<a name="create"></a>
+{% include_relative create.md %}
+
+<a name="access"></a>
+{# include_relative access.md #}
 

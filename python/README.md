@@ -8,7 +8,7 @@
 - [Форматування виводу](output-formatting)
 - {% include a.htm url="https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format" text="Форматирование строк с помощью format()" %}
 - {% include a.htm url="https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python" text="10 примеров использования методов строк в python" %}
-- [Ведущие нули](strings/leading_zeros/)
+- [Ведущие нули](leading_zeros/)
 
 ### Списки
 
