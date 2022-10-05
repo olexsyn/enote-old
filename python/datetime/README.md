@@ -57,6 +57,7 @@ print(x.strftime("%d.%m.%Y"))
     05.10.2022
 ----
 
+## isoformat(), fromisoformat()
 
 ```python
 from datetime import date
@@ -68,8 +69,11 @@ print(f"{dt=}")
 ```
     2019-12-04
     dt=datetime.date(2019, 12, 4)
-----
 
+
+## strftime()
+
+див. тут: https://www.w3schools.com/python/python_datetime.asp
 
 ```python
 from datetime import date
@@ -86,4 +90,5 @@ print(f"{dt_str=}")
     2019-12-04
     dt_str='04.12.2019'
 ----
+
 
