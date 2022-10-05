@@ -77,13 +77,13 @@ from datetime import date
 dt = date.fromisoformat('2019-12-04')
 
 print(dt.strftime("%B"))
-print(dt.strftime("%d.%m.%Y"))
+print(dt.strftime("%Y-%m-%d"))
 
 dt_str = dt.strftime("%d.%m.%Y")
 print(f"{dt_str=}")
 ```
     December
-    04.12.2019
+    2019-12-04
     dt_str='04.12.2019'
 ----
 
