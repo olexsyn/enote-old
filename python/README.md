@@ -16,6 +16,8 @@
 - [Функции sum, min и max](list/sum_min_max/)
 - [Метод списка list.sort() и функция sorted()](list/sort_sorted)
 
+### Бібліотеки
+- [datetime](datetime)
 
 ### Словари
 
@@ -79,7 +81,6 @@ if __name__ == '__main__':
 
 ---
 
-- [Как использовать модуль datetime](https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python)
 - [Цветной вывод текста в Python](https://all-python.ru/osnovy/tsvetnoj-vyvod-teksta.html)
 - [Асинхронность python на примере asyncio](https://pythonru.com/primery/asinhronnost-python-na-primere)
 - [Работа с документацией в Python: поиск информации и соглашения](https://proglib.io/p/python-docs/)
