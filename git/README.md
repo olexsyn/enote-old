@@ -3,6 +3,7 @@
 - [GitHub](github)
   - [Jekyll конструктор](github/pages/jekyll)
 - [Книга Pro Git](#progit)
+- [Робота з гілками](branches)
 
 ## TODO!
 
