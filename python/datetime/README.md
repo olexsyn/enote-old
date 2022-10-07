@@ -3,6 +3,8 @@
 - <https://docs.python.org/3/library/datetime.html>
 - <https://www.w3schools.com/python/python_datetime.asp>
 - [Как использовать модуль datetime](https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python)
+- [Как использовать модуль datetime](article01)
+
 
 ```python
 import datetime
