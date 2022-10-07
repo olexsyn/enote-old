@@ -556,7 +556,11 @@ print(t_obj)
 - Извлечь дату из определенных API каждый день, в определенное время.
 - Приложения для отслеживания событий, записей, бронирования и так далее.
 
-Скриншоты с https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python
+----
+
+## Скриншоты статьи
+
+<https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python>
 
 ![](article01_01.png)
 ![](article01_02.png)
