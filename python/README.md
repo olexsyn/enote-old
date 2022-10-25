@@ -23,7 +23,9 @@
 
 [Как объединить два словаря в Python](https://pythobyte.com/how-to-merge-two-dictionaries-in-python-48547651/)
 
+### Синтаксис
 
+- [if](syntax_if)
 
 ## Арифметика
 
