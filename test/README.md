@@ -123,7 +123,37 @@
 ```
 
 
-## Тест картинок
+## Тест іконок
+
+https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+
+| pict | `code` |
+| :---: | ----- |
+| :pushpin: | `:pushpin:` |
+| :link: | `:link:` |
+| :gear: | `:gear:` |
+| :shit: | `:shit:` |
+| :telephone_receiver: | `:telephone_receiver:` |
+| :mega: | `:mega:` |
+| :book: | `:book:` |
+| :key: | `:key:` |
+| :warning: | `:warning:` |
+| :no_entry: | `:no_entry:` |
+| :no_entry_sign: | `:no_entry_sign:` |
+| :radioactive: | `:radioactive:` |
+| :arrow_right: | `:arrow_right:` |
+| :high_brightness: | `:high_brightness:` |
+| :x: | `:x:` |
+| :heavy_multiplication_x: | `:heavy_multiplication_x:` |
+| :heavy_plus_sign: | `:heavy_plus_sign:` |
+| :heavy_minus_sign: | `:heavy_minus_sign:` |
+| :heavy_division_sign: | `:heavy_division_sign:` |
+| :bangbang: | `:bangbang:` |
+| :interrobang: | `:interrobang:` |
+| :question: | `:question:` |
+| :exclamation: | `:exclamation:` |
+| :red_circle: | `:red_circle:` |
+
 
 | desc           | img              | code              |
 | -------------: | :--------------: | :---------------- |
