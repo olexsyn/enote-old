@@ -129,6 +129,28 @@ https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 
 | pict | `code` |
 | :---: | ----- |
+| :anger: | `:anger:` |
+| :boom: | `:boom:` |
+| :bomb: | `:bomb:` |
+| :owl: | `:owl:` |
+| :bug: | `:bug:` |
+| :lady_beetle: | `:lady_beetle:` |
+| :hotsprings: | `:hotsprings:` |
+| :anchor: | `:anchor:` |
+| :hourglass: | `:hourglass:` |
+| :sunny: | `:sunny:` |
+| :star: | `:star:` |
+| :rainbow: | `:rainbow:` |
+| :zap: | `:zap:` |
+| :cyclone: | `:cyclone:` |
+| :fire: | `:fire:` |
+| :tada: | `:tada:` |
+| :dart: | `:dart:` |
+| :heart: | `:heart:` |
+| :hearts: | `:hearts:` |
+| :diamonds: | `:diamonds:` |
+| :ukraine: | `:ukraine:` |
+| :gem: | `:gem:` |
 | :pushpin: | `:pushpin:` |
 | :link: | `:link:` |
 | :gear: | `:gear:` |
@@ -153,16 +175,7 @@ https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 | :question: | `:question:` |
 | :exclamation: | `:exclamation:` |
 | :red_circle: | `:red_circle:` |
-
-
-| desc           | img              | code              |
-| -------------: | :--------------: | :---------------- |
-| **wa**rning    |  ![](/i/wa.png)  |  `![](/i/wa.png)` |
-| **in**fo       |  ![](/i/in.png)  |  `![](/i/in.png)` |
-| **qu**estion   |  ![](/i/qu.png)  |  `![](/i/qu.png)` |
-| **pl**us       |  ![](/i/pl.png)  |  `![](/i/pl.png)` |
-| **r**e**m**ove |  ![](/i/rm.png)  |  `![](/i/rm.png)` |
-| **t**a**g**    |  ![](/i/tg.png)  |  `![](/i/tg.png)` |
+| :zzz: | `:zzz:` |
 
 
 ## Command Line Template
