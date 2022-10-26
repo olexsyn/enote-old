@@ -4,6 +4,7 @@
   - [Jekyll конструктор](github/pages/jekyll)
 - [Книга Pro Git](#progit)
 - [Робота з гілками](branches)
+- :link: <https://www.freecodecamp.org/news/tag/git/>
 
 ## TODO!
 
