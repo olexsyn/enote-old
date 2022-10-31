@@ -11,6 +11,7 @@
 
 ## Решения
 
+- [console.dir(elem) і console.log(elem)](console_log_dir)
 - [Додати провідний нуль](add_leading_zero)
 - [Більше одгого відео YouTube на одній сторінці](several_youtube_video_on_page)
 
