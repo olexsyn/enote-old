@@ -5,12 +5,14 @@
 - [Vue](vue)
 - [var, let и const](var_let_const)
 - [String to Integer, Integer to String](str2int_int2str)
-- [Современный учебник JavaScript](https://learn.javascript.ru/)
+- [Современный учебник JavaScript](https://learn.javascript.ru/) :link:
   - [Массивы](https://learn.javascript.ru/array) :link:
   - [Строки](https://learn.javascript.ru/string) :link:
-
-  - [XMLHttpRequest](https://learn.javascript.ru/xmlhttprequest/)
-    - [XMLHttpRequest POST, формы и кодировка](https://learn.javascript.ru/xhr-forms)
+  - [Дата и время](https://learn.javascript.ru/date) :link:
+  - [Формат JSON, метод toJSON](https://learn.javascript.ru/json) :link:
+  - [Map и Set](https://learn.javascript.ru/map-set) :link:
+  - [XMLHttpRequest](https://learn.javascript.ru/xmlhttprequest/) :link:
+    - [XMLHttpRequest POST, формы и кодировка](https://learn.javascript.ru/xhr-forms) :link:
 
 ## Решения
 
