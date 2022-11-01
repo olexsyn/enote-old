@@ -5,7 +5,7 @@
 - [Vue](vue)
 
 - [var, let и const](var_let_const)
-- [str to int, int to str](str2int_int2str)
+- [String to Integer, Integer to String](str2int_int2str)
 - [Современный учебник JavaScript](https://learn.javascript.ru/)
   - [XMLHttpRequest](https://learn.javascript.ru/xmlhttprequest/)
     - [XMLHttpRequest POST, формы и кодировка](https://learn.javascript.ru/xhr-forms)
