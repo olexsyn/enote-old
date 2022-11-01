@@ -1,5 +1,7 @@
 # String to Integer, Integer to String
 
+<https://learn.javascript.ru/object-toprimitive>
+
 ## parseInt()
 
 Функція `parseInt()` аналізує рядковий аргумент і повертає ціле число вказаної системи числення (основа в математичних системах числення).
