@@ -3,10 +3,12 @@
 - [jQuery](jquery)
 - [React](react)
 - [Vue](vue)
-
 - [var, let и const](var_let_const)
 - [String to Integer, Integer to String](str2int_int2str)
 - [Современный учебник JavaScript](https://learn.javascript.ru/)
+  - [Массивы](https://learn.javascript.ru/array) :link:
+  - [Строки](https://learn.javascript.ru/string) :link:
+
   - [XMLHttpRequest](https://learn.javascript.ru/xmlhttprequest/)
     - [XMLHttpRequest POST, формы и кодировка](https://learn.javascript.ru/xhr-forms)
 
