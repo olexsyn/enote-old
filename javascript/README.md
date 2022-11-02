@@ -4,6 +4,7 @@
 - [React](react)
 - [Vue](vue)
 - [var, let и const](var_let_const)
+- [Взаємодія з користувачем: alert, prompt, confirm](https://learn.javascript.ru/alert-prompt-confirm) :link:
 - [String to Integer, Integer to String](str2int_int2str)
 - [Современный учебник JavaScript](https://learn.javascript.ru/) :link:
   - [Массивы](https://learn.javascript.ru/array) :link:
