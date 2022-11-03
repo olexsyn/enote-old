@@ -4,17 +4,18 @@
 
 ### Строки
 
-- [Строки в python 3: методы, функции, форматирование](https://pythonru.com/osnovy/stroki-python)
+- [Строки в python 3: методы, функции, форматирование](https://pythonru.com/osnovy/stroki-python) :link:
 - [Форматування виводу](output-formatting)
-- [Форматирование строк с помощью format()](https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format)
-- [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python)
+- [Форматирование строк с помощью format()](https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format) :link:
+- [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python) :link:
 - [Ведущие нули](leading_zeros/)
+- [Яка різниця між `isdigit()`, `isdecimal()`, `isnumeric()` і як їх використовувати?](https://miguendes.me/python-isdigit-isnumeric-isdecimal) :link:
 
 ### Списки
 
-- [Функции any и all](list/any_all/)
-- [Функции sum, min и max](list/sum_min_max/)
-- [Метод списка list.sort() и функция sorted()](list/sort_sorted)
+- [Функции `any` и `all`](list/any_all/)
+- [Функции `sum`, `min` и `max`](list/sum_min_max/)
+- [Метод списка `list.sort()` и функция `sorted()`](list/sort_sorted)
 
 ### Бібліотеки
 - [datetime](datetime)
@@ -22,7 +23,7 @@
 
 ### Словари
 
-[Как объединить два словаря в Python](https://pythobyte.com/how-to-merge-two-dictionaries-in-python-48547651/)
+[Как объединить два словаря в Python](https://pythobyte.com/how-to-merge-two-dictionaries-in-python-48547651/) :link:
 
 ### Синтаксис
 
