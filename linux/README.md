@@ -1,10 +1,33 @@
 # Linux
 
+скинути і знову увімкнути своп:
+```
+sudo swapoff -a
+sudo swapon -a
+```
+встановити дозволи на всі каталоги чи файли:
+```
+find ./catalog -type d -exec chmod 755 {} \;
+find ./catalog -type f -exec chmod 644 {} \;
+```
+Створити вміст каталогу / розархівувати tgz-архів:
+```
+tar -czf pages.tgz ./pages
+tar -xzf pages.tgz
+```
+скинути сторінковий кеш:
+```
+su -
+sync; echo 1 > /proc/sys/vm/drop_caches
+```
+
 <https://www.stationx.net/linux-command-line-cheat-sheet/>
 
 - [apt](apt)         - менеджер пакетів
 - [cat](cat)         - показати вміст файлу
 - [cd](cd)           - перейти в каталог
+- [chmod](http://ans.kiev.ua/wiki/linux/commands/chmod_chown_r)
+- [chown](http://ans.kiev.ua/wiki/linux/commands/chmod_chown)
 - [cp](cp)           - копіювати файл(и) або каталог(и)
 - [dig](dig)         - подивитися запис домену
 - [du](du)           - розмір каталогу або файлу
@@ -34,7 +57,6 @@
 - [terminal](terminal) - термінал
 - [touch](touch)     - створити порожній файл
 - [unlink](unlink)   - видалення файлу або символічного посилання на файл
-- 
 
 - [Як...](how_to)
   - [встановити шрифти](how_to/install_fonts)
