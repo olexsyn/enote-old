@@ -10,6 +10,7 @@
 - [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python) :link:
 - [Ведущие нули](leading_zeros/)
 - [Яка різниця між `isdigit()`, `isdecimal()`, `isnumeric()` і як їх використовувати?](https://miguendes.me/python-isdigit-isnumeric-isdecimal) :link:
+- [`type()` vs `isinstance()`](type_isinstance)
 
 ### Списки
 
