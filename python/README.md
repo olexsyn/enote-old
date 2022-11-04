@@ -1,10 +1,9 @@
 # Python
 
-{% include_relative idx_content.md %}
 
-### Строки
+## Строки
 
-- [Строки в python 3: методы, функции, форматирование](https://pythonru.com/osnovy/stroki-python) :link:
+- [Строки в python 3: методы, функции, форматирование](https://pythonru.com/osnovy/stroki-python) :link: :onion:
 - [Форматування виводу](output-formatting)
 - [Форматирование строк с помощью format()](https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format) :link:
 - [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python) :link:
@@ -13,13 +12,31 @@
 - [Яка різниця між `isdigit()`, `isdecimal()`, `isnumeric()` і як їх використовувати?](https://miguendes.me/python-isdigit-isnumeric-isdecimal) :link:
 - [`type()` vs `isinstance()`](type_isinstance)
 
-### Списки
+### split i join
+
+```python
+txt = "welcome to the jungle"
+x = txt.split()
+print(x)          # ['welcome', 'to', 'the', 'jungle']
+y = txt.split('o')
+print(y)          # ['welc', 'me t', 'the jungle']
+```
+див.також `.rsplit()`, `.partition()`, `.splitlines()`, 
+
+```python
+my_tuple = ("John", "Peter", "Vicky")
+x = "-".join(my_tuple)
+print(x)          # 'John-Peter-Vicky'
+```
+
+
+## Списки
 
 - [Функции `any` и `all`](list/any_all/)
 - [Функции `sum`, `min` и `max`](list/sum_min_max/)
 - [Метод списка `list.sort()` и функция `sorted()`](list/sort_sorted)
 
-### Бібліотеки
+## Бібліотеки
 - [datetime](datetime)
 - [json](json)
 
