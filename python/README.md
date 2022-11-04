@@ -8,6 +8,7 @@
 - [Форматування виводу](output-formatting)
 - [Форматирование строк с помощью format()](https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format) :link:
 - [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python) :link:
+- [Конвертация между байтами и строками](https://pyneng.readthedocs.io/ru/latest/book/16_unicode/python_3_convert.html) :link:
 - [Ведущие нули](leading_zeros/)
 - [Яка різниця між `isdigit()`, `isdecimal()`, `isnumeric()` і як їх використовувати?](https://miguendes.me/python-isdigit-isnumeric-isdecimal) :link:
 - [`type()` vs `isinstance()`](type_isinstance)
