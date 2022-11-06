@@ -73,7 +73,7 @@ one > mango
 two > banana
 ```
 
-## Перебор словаря по ключам
+## Перебір словника за ключами
 
 ```python
 for key in dict_sample.keys():
@@ -83,7 +83,20 @@ for key in dict_sample.keys():
 one > mango
 two > banana
 ```
-## Перебор значений словаря
+
+:fire: Якщо помістити словник безпосередньо в цикл `for`, Python автоматично викличе `.__iter__()` для цього словника, і ми отримаємо ітератор за його ключами:
+
+```python
+for key in a_dict:
+    print(key)
+```
+```
+one
+two
+```
+Це найпростіший спосіб перебору словника Python!
+
+## Перебір значень словника
 
 ```python
 for i in dict_sample.values():
