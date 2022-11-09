@@ -1,12 +1,177 @@
 # Логи в Python. Модуль logging
 
-- [Логирование в Python: руководство разработчика](https://habr.com/ru/amp/post/683880/) :sa:
-- [Логи в Python. Настройка и централизация](https://nuancesprog.ru/p/5980/)
-- [Python: Логируем как профессионалы](https://habr.com/ru/amp/post/590067/) :sa:
+[**docs.python.org/3**/library/logging.html](https://docs.python.org/3/library/logging.html)
 
-* джерело: [How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
+- [Логирование в Python: руководство разработчика](https://habr.com/ru/amp/post/683880/) :sa:
+- [Логи в Python. Настройка и централизация](https://nuancesprog.ru/p/5980/) | [джерело](https://www.datadoghq.com/blog/python-logging-best-practices/)
+- [Python: Логируем как профессионалы](https://habr.com/ru/amp/post/590067/) :sa:
 * див. також: https://khashtamov.com/ru/python-logging/ | https://habr.com/ru/post/513966/
-* оф. док.: [**docs.python.org/3**/library/logging.html](https://docs.python.org/3/library/logging.html)
+
+
+Level | Numeric value
+| --- | :---: |
+CRITICAL | 50
+ERROR | 40
+WARNING | 30
+INFO | 20
+DEBUG | 10
+NOTSET | 0
+
+## Приклад налаштування простого логування, наприклад для відлагодження
+
+```python
+import logging as log
+import traceback
+
+LOG_LEVEL  = log.DEBUG
+LOG_FILE   = 'log.log'
+LOG_FMODE  = 'a'        # append / write
+LOG_FORMAT = "%(asctime)s %(levelname)s %(name)s.%(funcName)s(%(lineno)d) > %(message)s"
+
+def do_start():
+	log.info('Program START')
+
+
+def do_finish():
+	log.info("Program FINISH")
+
+
+def div(a, b):
+	try:
+		c = a / b
+		log.info(f'{a}/{b} successful with result: {c}')
+
+	except ZeroDivisionError as err:
+		log.error("ZeroDivisionError", exc_info=True)
+
+	except:  # логування помилок, що не обробляються (необхідний import traceback)
+		log.error("Uncaught Exception\n%s", traceback.format_exc())
+		return False
+
+	else:
+		return c
+
+	return False
+
+
+log.basicConfig(level=LOG_LEVEL, filename=LOG_FILE, filemode=LOG_FMODE, format=LOG_FORMAT)
+
+do_start()
+log.debug("Just a DEBUG Message")
+
+c = div(12,0)
+print(f'{c=}')
+
+do_finish()
+```
+
+### div(12,6) - без помилок
+
+```
+2022-11-09 14:53:47,752 INFO root.do_finish(14) > Program FINISH
+2022-11-09 14:54:00,640 INFO root.do_start(10) > Program START
+2022-11-09 14:54:00,640 DEBUG root.<module>(43) > Just a DEBUG Message
+2022-11-09 14:54:00,641 INFO root.div(20) > 12/6 successful with result: 2.0
+2022-11-09 14:54:00,641 INFO root.do_finish(14) > Program FINISH
+```
+
+### div(12,0) - ловимо except ZeroDivisionError
+
+```
+2022-11-09 14:54:43,586 INFO root.do_start(10) > Program START
+2022-11-09 14:54:43,587 DEBUG root.<module>(43) > Just a DEBUG Message
+2022-11-09 14:54:43,589 ERROR root.div(23) > ZeroDivisionError
+Traceback (most recent call last):
+  File "/home/olex/dev/log/log.py", line 19, in div
+    c = a / b
+ZeroDivisionError: division by zero
+2022-11-09 14:54:43,589 INFO root.do_finish(14) > Program FINISH
+```
+
+### div(12,0) - except:
+
+Якщо закоментувати блок `except ZeroDivisionError`, то при виконанні цього коду виникне TypeError, що не обробляється в try-except і 'Traceback' не буде записано у log-файл. Однак, за допомогою стандатного модуля `traceback` є можливість це зробити:
+
+```python
+	except:  # логування помилок, що не обробляються (необхідний import traceback)
+		log.error("Uncaught Exception\n%s", traceback.format_exc())
+		return False
+```
+```
+2022-11-09 14:51:34,147 INFO root.do_finish(14) > program FINISH
+2022-11-09 14:53:47,752 INFO root.do_start(10) > Program START
+2022-11-09 14:53:47,752 DEBUG root.<module>(43) > Just a DEBUG Message
+2022-11-09 14:53:47,752 ERROR root.div(26) > Uncaught Exception
+Traceback (most recent call last):
+  File "/home/olex/dev/log/log.py", line 19, in div
+    c = a / b
+ZeroDivisionError: division by zero
+```
+
+## Приклад налаштування логування за допомогою логгерів, обробників і форматувальників
+
+```python
+import logging
+
+SCRIPT_NAME = 'log2'
+
+IP_ADDR    = '123.45.6.789'
+
+LOG_NAME   = SCRIPT_NAME
+LOG_FILE   = LOG_NAME + '.log'
+LOG_FMODE  = 'a'                # append / write
+LOG_LEVEL  = logging.DEBUG      # log.INFO
+LOG_FORMAT = f"%(asctime)s - {IP_ADDR} [%(process)d] %(levelname)s - %(name)s.%(funcName)s(%(lineno)d) > %(message)s"
+
+
+def do_start():
+	log.info('START' + '-'*20)
+
+def do_finish():
+	log.info("program FINISH")
+
+
+def div(a, b):
+	try:
+		c = a / b
+		log.info(f'{a}/{b} successful with result: {c}')
+
+	except ZeroDivisionError as err:
+		log.error("ZeroDivisionError", exc_info=True)
+
+	else:
+		return c
+
+	return False
+
+
+log = logging.getLogger(SCRIPT_NAME) # %(name)s > 'root'
+# log = logging.getLogger(__name__)  # %(name)s > __name__
+log.setLevel(LOG_LEVEL)
+
+# налаштування обробника та форматувальника для log
+handler   = logging.FileHandler(LOG_FILE, mode=LOG_FMODE)
+formatter = logging.Formatter(LOG_FORMAT)
+handler.setFormatter(formatter)  # додавання форматувальника до оброблювача
+log.addHandler(handler)  # додавання оброблювача до логгера
+
+
+do_start()
+
+log.debug("A DEBUG Message")
+
+c = div(12,2)
+print(f'{c=}')
+
+do_finish()
+```
+
+```
+2022-11-09 13:29:08,558 - 123.45.6.789 [7908] INFO - log2.do_start(20) > START--------------------
+2022-11-09 13:29:08,559 - 123.45.6.789 [7908] DEBUG - log2.<module>(54) > A DEBUG Message
+2022-11-09 13:29:08,559 - 123.45.6.789 [7908] INFO - log2.div(29) > 12/2 successful with result: 6.0
+2022-11-09 13:29:08,559 - 123.45.6.789 [7908] INFO - log2.do_finish(23) > program FINISH
+```
 
 ## Вступ
 
