@@ -1,9 +1,12 @@
 # Логи в Python. Модуль logging
 
+- [Логирование в Python: руководство разработчика](https://habr.com/ru/amp/post/683880/) :hubr:
+- [Логи в Python. Настройка и централизация](https://nuancesprog.ru/p/5980/)
+- [Python: Логируем как профессионалы](https://habr.com/ru/amp/post/590067/) :hubr:
+
 * джерело: [How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
-* переклад на рос.: https://nuancesprog.ru/p/5980/
-* див. також: https://khashtamov.com/ru/python-logging/ , https://habr.com/ru/post/513966/
-* оф. док.: [https://**docs.python.org/3**/library/logging.html](https://docs.python.org/3/library/logging.html)
+* див. також: https://khashtamov.com/ru/python-logging/ | https://habr.com/ru/post/513966/
+* оф. док.: [**docs.python.org/3**/library/logging.html](https://docs.python.org/3/library/logging.html)
 
 ## Вступ
 
