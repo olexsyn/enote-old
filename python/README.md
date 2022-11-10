@@ -46,6 +46,7 @@ print(x)          # 'John-Peter-Vicky'
 
 ### Синтаксис
 
+- [Глобальні змінні `global`](global)
 - [if](syntax_if)
 
 ## Арифметика
