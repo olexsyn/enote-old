@@ -23,7 +23,13 @@ if res:
 else:
     print('not found')
 ```
-
+```
+res = <re.Match object; span=(0, 10), match='1:02:34.05'>
+res.groups() = ('1:02:34', '05')
+res.group(0) = 1:02:34.05
+res.group(1) = 1:02:34
+res.group(2) = 05
+```
 ## findall
 
 ```python
