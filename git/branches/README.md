@@ -20,7 +20,7 @@
     $ git checkout -b iss53
     Switched to a new branch "iss53"
 
-Міняємо файли...  
+Правимо файли, тестуємо...  
 Коммітимо:
 
     $ git commit -a -m 'added chahges for [issue 53]'
