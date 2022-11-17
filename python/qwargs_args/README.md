@@ -7,6 +7,9 @@
 
 Ми використовуємо `*args` і `**kwargs` як аргумент, коли завчасно невідомо, скільки значень ми захочемо передати функції.
 
+[Приклад функції, яка цікава тим, що один її параметр може приймати як рядок, так і список або словник](#my_func)
+
+
 ### Приклад з `*args`:
 
 ```python
@@ -55,4 +58,24 @@ Email is johnwood@nomail.com
 Country is Wakanda
 Age is 25
 Phone is 9876543210
+```
+
+<a href="my_func"></a>
+### Приклад функції, яка цікава... 
+
+... тим, що один її параметр може приймати як рядок, так і список або словник і в залежності від цього обробляє передані дані
+
+```python
+# ---------------------------------------------------------------------
+def log(level, mess, vals=None):
+
+	if vals:
+		if isinstance(vals, str):
+			logger.log(level, mess.format(vals))    # рядок
+		elif isinstance(vals, (tuple, list)):
+			logger.log(level, mess.format(*vals))   # список/кортеж
+		elif isinstance(vals, dict):
+			logger.log(level, mess.format(**vals))  # словник
+	else:
+		logger.log(level, mess)
 ```
