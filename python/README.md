@@ -49,6 +49,7 @@ print(x)          # 'John-Peter-Vicky'
 - [Глобальні змінні `global`](global)
 - [if](syntax_if)
 - [yield](yield)
+- [args i qwargs](qwargs_args)
 
 ## Арифметика
 
