@@ -2,6 +2,8 @@
 
 http://ans.kiev.ua/wiki/linux/linuxlite
 
+[Linux Lite](linuxlite)
+
 - [ua розкладка з додатковими ru літерами](keyboard)
 - [kbdswtch - скрипт для перекидання тексту з однієї розкладки в іншу](keyboard/kbdswtch) (En-Uk)
 - [config/user-dirs.dirs](user-dir.dirs)
