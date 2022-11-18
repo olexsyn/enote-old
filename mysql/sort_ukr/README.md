@@ -4,7 +4,11 @@ MySQL сортує український алфавіт у такий спос�
 
 Щоб не мати проблем з сортуванням, таблиці слід створювати з `CHARACTER SET utf8 COLLATE utf8_unicode_ci`.
 
-Але прочитай це: https://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+> Прочитай це:  
+> https://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci  
+> Але...  
+> ```CREATE TABLE test2 (name CHAR(20) CHARACTER SET utf8 COLLATE utf8mb4_unicode_ci);```  
+> ```ERROR 1253 (42000): COLLATION 'utf8mb4_unicode_ci' is not valid for CHARACTER SET 'utf8mb3'```
 
 Приклад:
 
