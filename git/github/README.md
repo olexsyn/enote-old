@@ -3,6 +3,7 @@
 - [GitHub Pages](pages)
 
 - [GitHub Flavored Markdown](gfm)
+  - [Test](test)
 
 - [Подключение к GitHub через SSH](ssh)
 - [Перенести на сервер локальный репозиторий](repo2server)
