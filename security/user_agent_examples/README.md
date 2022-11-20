@@ -1,5 +1,8 @@
 # User Agent Examples
 
+- https://user-agents.net/
+- https://developers.whatismybrowser.com/useragents/
+
 ### Android Mobile User Agents
 
 dev | user_agent
