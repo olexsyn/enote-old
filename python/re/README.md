@@ -10,26 +10,34 @@ import re
 print('re: search')
 print('-' * 30, '\n')
 
-time_str = '1:02:34.05'
+time_str = 'some 1:02:34.05 time'
 
-res = re.search('^(.+)[\.,](.+)$', time_str)
+res = re.search('([\:\d]+)[\.,](\d+)', time_str)
 
 if res:
-    print('res =',res)     
-    print('res.groups() =',res.groups())     
-    print('res.group(0) =',res.group(0))     
-    print('res.group(1) =',res.group(1))     
-    print('res.group(2) =',res.group(2))     
+    print('res =',res)
+    print('res.string =',res.string)
+    print('res.groups() =',res.groups())
+    print('res.group(0) =',res.group(0))
+    print('res.group(1) =',res.group(1))
+    print('res.group(2) =',res.group(2))
+    print('res.lastindex =',res.lastindex)
 else:
     print('not found')
 ```
 ```
-res = <re.Match object; span=(0, 10), match='1:02:34.05'>
+re: search
+------------------------------ 
+
+res = <re.Match object; span=(5, 15), match='1:02:34.05'>
+res.string = some 1:02:34.05 time
 res.groups() = ('1:02:34', '05')
 res.group(0) = 1:02:34.05
 res.group(1) = 1:02:34
 res.group(2) = 05
+res.lastindex = 2
 ```
+
 ## findall
 
 ```python
