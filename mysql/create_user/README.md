@@ -1,5 +1,25 @@
 # Приклад створення БД, та користувача
 
+## Стисло
+
+Створити користувача **adm** для бази **testdb** з паролем _"admPass"_ і максимальними привілеями для всіх таблиць цієї бази:
+
+```sql
+CREATE USER 'adm'@'localhost' IDENTIFIED BY 'admPass';
+GRANT ALL PRIVILEGES ON testdb.* TO 'adm'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+Створити користувача **usr** для бази **testdb** з паролем _"usrPass"_ і мінімальними привілеями для всіх таблиць цієї бази:
+
+```sql
+CREATE USER 'usr'@'localhost' IDENTIFIED BY 'usrPass';
+GRANT SELECT, UPDATE, INSERT, DELETE, LOCK TABLES, CREATE TEMPORARY TABLES, CREATE VIEW ON testdb.* TO 'usr'@'localhost';"
+FLUSH PRIVILEGES;
+```
+Цей користувач матиме право додавати, змінювати, видаляти дані у таблицях однієї бази, блокувати їх, створювати тимчасові (для сесії) таблиці:
+
+
 ## Вхід
 
 Заходимо під root'ом в MySQL (MariaDB):
