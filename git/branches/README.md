@@ -10,6 +10,14 @@
 
 ([git-scm.com/book](https://git-scm.com/book/uk/v2/) :link:)
 
+список гілок:
+
+    git branch
+
+Подивитися останні коміти
+
+    git branch -v
+
 Створити нову гілку 'iss53' і перейти в неї
 
     $ git branch iss53
