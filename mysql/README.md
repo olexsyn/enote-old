@@ -1,5 +1,6 @@
 # MySQL
 
+- [SQLite, MySQL и PostgreSQL: сравниваем популярные реляционные СУБД](sqlite_mysql_postgresql)
 - [MariaDB Connector/Python](https://mariadb.com/docs/appdev/connector-python/)
 - [MySQL Connector/Python Developer Guide](https://dev.mysql.com/doc/connector-python/en/)
 - [Типы данных](datatype)
