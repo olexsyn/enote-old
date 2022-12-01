@@ -7,6 +7,6 @@
 - [Списки](list)
 - [Формы](forms)
   - [Перехід за посиланням за допомогою кнопки](forms/button_as_link)
-  - [`<input type=number>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input/number) :link: [а також](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode) :link:
+  - [`<input type=number>`](input_type_number)
 
 [Исходящие ссылки. rel=nofollow,sponsored и пр.](https://support.google.com/webmasters/answer/96569?hl=ru)
