@@ -27,4 +27,14 @@ https://www.jotform.com/blog/html5-datalists-what-you-need-to-know-78024/
   <option value="4" label="Los Angeles" />
   <option value="5" label="Chicago" />
 </datalist>
+
+<label for="exampleDataList" class="form-label">Datalist example</label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="San Francisco" label="1" />
+  <option value="New York" label="2" />
+  <option value="Seattle" label="3" />
+  <option value="Los Angeles" label="4" />
+  <option value="Chicago" label="5" />
+</datalist>
 ```
