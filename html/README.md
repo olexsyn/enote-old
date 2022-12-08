@@ -10,3 +10,21 @@
   - [`<input type=number>`](input_type_number)
 
 [Исходящие ссылки. rel=nofollow,sponsored и пр.](https://support.google.com/webmasters/answer/96569?hl=ru)
+
+##datalist
+
+:boom: TODO
+
+https://www.jotform.com/blog/html5-datalists-what-you-need-to-know-78024/
+
+```html
+<label for="exampleDataList" class="form-label">Datalist example</label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="1" label="San Francisco" />
+  <option value="2" label="New York" />
+  <option value="3" label="Seattle" />
+  <option value="4" label="Los Angeles" />
+  <option value="5" label="Chicago" />
+</datalist>
+```
