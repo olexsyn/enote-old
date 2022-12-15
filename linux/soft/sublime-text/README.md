@@ -12,9 +12,11 @@
 
 Из списка команд нам доступно установка пакетов, соответственно их удаление, добавление репозитория пакета, поиск пакетов, обновление и т.д.
 
-- ![v][v] **Emmet** <https://docs.emmet.io/abbreviations/syntax/>
-- ![v][v] **ColorPicker** <https://github.com/weslly/ColorPicker> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>)
 - ![v][v] **AutoBackups** <https://packagecontrol.io/packages/AutoBackups> - сохраняет версии редактируемых файлов
+- ![v][v] **ColorHighlight** https://github.com/Monnoroch/ColorHighlight - подсвечивает кодировку цвета (вместо  GutterColor и ColorHighlighter)
+- ![x][c] **ColorHighlighter** https://github.com/Monnoroch/ColorHighlighter
+- ![?][q] **Emmet** <https://docs.emmet.io/abbreviations/syntax/>
+- ![x][c] **ColorPicker** <https://github.com/weslly/ColorPicker> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>) Глючный, как сапожник!
 - ![v][v] **Trimmer** <https://github.com/jonlabelle/Trimmer> - удаляет предваряющие/заключающие/и_прочие пробелы и пробельные символы (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>)
 - ![v][v] Тема **Afterglow** <https://github.com/YabataDesign/afterglow-theme/blob/master/README.md>
 - ![v][v] **SidebarSeparator** <https://packagecontrol.io/packages/SidebarSeparator> - возможность вставлять разделитель в списке открытых файлов 
@@ -25,7 +27,7 @@
 - ![v][v] **rainbow_csv** <https://packagecontrol.io/packages/rainbow_csv> / <https://habr.com/post/429548/>
 
 - ![x][c] https://github.com/ggordan/GutterColor - (потребовалось установить http://www.imagemagick.org/ а для него - **_GNU C compiler_** (пакет `gcc`)
-- ![x][c] https://github.com/Monnoroch/ColorHighlighter - вместо GutterColor - подсвечивает кодировку цвета (#337ab7, red и др.) в файлах, указанных в его настройках.
+настройках.
 - ![?][q] **ZenTabs** - не помню, не использую  
 - ![?][q] **RegReplace** <https://facelessuser.github.io/RegReplace/usage/> - Позволяет сохранять последовательности рег.выражений для обработки текстовых файлов. <span style="r">Пока не разобрался</span>  
 
