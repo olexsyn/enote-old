@@ -81,13 +81,14 @@
     "font_size": 13,
     "theme": "Default Dark.sublime-theme",
     "color_scheme": "Mariana.sublime-color-scheme",
-    "ignored_packages": ["Vintage",],
+    "ignored_packages": ["Vintage",
+    ],
 
     // Стовпці для відображення вертикальних лінійок
     "rulers": [80,],
 
     // Установіть значення true, щоб вставляти пробіли під час натискання табуляції
-    "translate_tabs_to_spaces": true,
+    "translate_tabs_to_spaces": false,
 
     // Вимикає горизонтальне прокручування, якщо ввімкнено.
     // Може бути встановлено на true, false або "auto", для яких його буде вимкнено
@@ -124,14 +125,14 @@
     "ensure_newline_at_eof_on_save": true,
 
     // Керує видаленням пробілу в кінці під час збереження.
-    // - "немає": не видаляти кінцеві пробіли під час збереження.
-    // - "все": Видалити всі пробіли в кінці під час збереження.
+    // - "none": не видаляти кінцеві пробіли під час збереження.
+    // - "all": Видалити всі пробіли в кінці під час збереження.
     // - "not_on_caret": видаляйте лише пробіли, які не впливатимуть
     //                   на каретку.
     //                   Якщо використовується разом із "save_on_focus_lost" і певними
     // середовищами робочого столу, через які програма часто втрачає
     // фокус, це дозволяє уникнути стрибків курсору.
-    "trim_trailing_white_space_on_save": "none",
+    "trim_trailing_white_space_on_save": "all",
 
     // Установіть значення true, щоб автоматично зберігати файли під час переходу до іншого файлу чи програми
     "save_on_focus_lost": false,
@@ -144,7 +145,7 @@
     // відповідний файл .tmTheme і вказуючи кольори "guide",
     // "activeGuide" і "stackGuide"
     "draw_indent_guides": true,
-    "trim_trailing_white_space_on_save": "none",
+    /*"trim_trailing_white_space_on_save": "none",*/
 }
 ```
 
