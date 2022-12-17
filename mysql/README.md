@@ -6,6 +6,7 @@
 - [Типы данных](datatype)
   - [Про NULL](null)
   - [Datetime или timestamp](https://habr.com/ru/post/61391/)
+  - Проблемы со сравнением **чисел с плавающей точкой**: http://www.mysql.ru/docs/man/Problems_with_float.html
 - [Коректне сортування українських літер](sort_ukr)
 - [ALTER TABLE](alter_table)
 - [Auto_increment](auto_increment)
