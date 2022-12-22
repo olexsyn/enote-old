@@ -1,4 +1,6 @@
-# Додати провідний нуль
+# Додати провідні нулі
+
+## Додати ОДИН провідний нуль (місяць, число, години, хвилини...)
 
 Просто додавайте провідний нуль у любому випадку, а потім використовуйте slice(-2), щоб отримати останні два символи, наприклад:
 
@@ -35,4 +37,22 @@ javascript:
                 ('0' +  today.getDate()      ).slice(-2);
         $("#tRegDt").val(date_str);
     });
+```
+
+## Додати ДЕКІЛЬКА провідних нулів
+
+```javascript
+function lz(strn, size)
+{
+	var strn = strn + '';
+
+	while (strn.length < size)
+		strn = '0' + strn;
+
+	return strn;
+}
+
+const House = 1;
+const Flat = 3;
+let inp = House + lz(Flat,3);  // 1 + '003' = '1003'
 ```
