@@ -63,6 +63,11 @@ MySQL не оправдает ваших ожиданий. Вы получите
 
 На деле же ничего неожиданного нет, если вы помните, что любая операция с NULL вернёт NULL, кроме специальных операций, предназначенных для работы с NULL: IS NULL, IS NOT NULL, IFNULL()
 
+> Функція **IFNULL()** повертає альтернативне значення, якщо вираз дорівнює NULL.  
+> IFNULL(expression, alt_value)  
+> **expression** - Required. The expression to test whether is NULL  
+> **alt_value** - Required. The value to return if expression is NULL  
+
 ## Сортировка по NULL
 
 
