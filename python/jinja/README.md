@@ -9,7 +9,7 @@
 "pip3 install Jinja2"
 
 ...
-Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
+Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" % #}
 
 На сервере, где установлено окружение (напр. python3.7), необходимо добавить опцию `--user`:
 
@@ -26,7 +26,7 @@ which pip3.7
 
 ...
 Could not install packages due to an EnvironmentError: [Errno 13] Permission denied...
-Consider using the `--user` option or check the permissions." %}
+Consider using the `--user` option or check the permissions." % #}
 
 
 ```
@@ -34,7 +34,7 @@ Consider using the `--user` option or check the permissions." %}
 
 ...
 Installing collected packages: MarkupSafe, Jinja2
-Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" %}
+Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1" % #}
 
 
 > :warning: **Экспериментальная поддержка Python 3** :nbsp: Jinja 2.7 обеспечивает экспериментальную поддержку Python >= 3.3. Это означает, что все unittests передают новую версию, но там могут быть небольшие ошибки, и поведение может быть непоследовательным. Если вы заметили какие-либо ошибки, сообщите об этом в трекер Jinja.
@@ -76,9 +76,9 @@ print(template.render(name=u'Вася'))
 
 ```python
 {# Это кусок кода, который стал временно не нужен, но удалять жалко
-    {% for user in users %}
+    {# % for user in users % #}
         ...
-    {% endfor %}
+    {# % endfor % #}
 #}
 ```
 
@@ -90,7 +90,7 @@ print(template.render(name=u'Вася'))
 ```python
 # -*- coding: utf-8 -*-
 from jinja2 import Template
-text = '{% for item in range(5) %}Hello ![pic]( name )! {% endfor %}'
+text = '{# % for item in range(5) % #}Hello ![pic]( name )! {# % endfor % #}'
 template = Template(text)
 print(template.render(name=u'Вася'))
 ```
@@ -119,7 +119,7 @@ print(m.c)
 # -*- coding: utf-8 -*-
 from jinja2 import Template
 
-template = Template('{% macro foo() %}42{% endmacro %}23')
+template = Template('{# % macro foo() % #}42{# % endmacro % #}23')
 m = template.module
 print(m)
 print(m.foo())
@@ -137,9 +137,9 @@ print(m.foo())
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
   <body>
-    {% for item in range(5) %}
+    {# % for item in range(5) % #}
       Hello ![pic]( name )!
-    {% endfor %}
+    {# % endfor % #}
   </body>
 </html>
 ```
@@ -231,9 +231,9 @@ html = '''<!DOCTYPE html>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
   <body>
-    {% for item in range(5) %}
+    {# % for item in range(5) % #}
       Hello ![pic]( name )!
-    {% endfor %}
+    {# % endfor % #}
   </body>
 </html>
 '''
@@ -257,9 +257,9 @@ html = '''<!DOCTYPE html>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
   <body>
-    {% for item in range(5) %}
+    {# % for item in range(5) % #}
       Hello ![pic]( name )!
-    {% endfor %}
+    {# % endfor % #}
   </body>
 </html>
 '''
@@ -288,9 +288,9 @@ html = '''<!DOCTYPE html>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
   <body>
-    {% for item in range(5) %}
+    {# % for item in range(5) % #}
       Hello ![pic]( name )!
-    {% endfor %}
+    {# % endfor % #}
   </body>
 </html>
 '''
@@ -325,9 +325,9 @@ html = '''<!DOCTYPE html>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
   <body>
-    {% for item in range(5) %}
+    {# % for item in range(5) % #}
       Hello ![pic]( name )!
-    {% endfor %}
+    {# % endfor % #}
   </body>
 </html>
 '''
@@ -453,44 +453,44 @@ server {
 }
 ```
 
-### {% extends «Наследование» %}
+### {# % extends «Наследование» % #}
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
+    {# % block head % #}
       <link rel="stylesheet" href="style.css" />
-      <title>{% block title %}{% endblock %} - My Webpage</title>
+      <title>{# % block title % #}{# % endblock % #} - My Webpage</title>
       <meta charset='utf-8'>
-    {% endblock %}
+    {# % endblock % #}
 </head>
 <body>
-    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="content">{# % block content % #}{# % endblock % #}</div>
     <div id="footer">
-        {% block footer %}
+        {# % block footer % #}
           &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
-        {% endblock %}
+        {# % endblock % #}
     </div>
 </body>
 </html>
 ```
 
 ```python
-{% extends "base.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
+{# % extends "base.html" % #}
+{# % block title % #}Index{# % endblock % #}
+{# % block head % #}
     ![pic]( super() )
     <style type="text/css">
         .important { color: #336699; }
     </style>
-{% endblock %}
-{% block content %}
+{# % endblock % #}
+{# % block content % #}
     <h1>Index</h1>
     <p class="important">
       Welcome ![pic]( name ) to my awesome homepage.
     </p>
-{% endblock %}
+{# % endblock % #}
 ```
 
 ```python
@@ -538,21 +538,21 @@ print(template.render(name=u'Петя'))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
+    {# % block head % #}
       <link rel="stylesheet" href="style.css" />
-      <title>{% block title %}{% endblock %} - My Blog</title>
+      <title>{# % block title % #}{# % endblock % #} - My Blog</title>
       <meta charset='utf-8'>
-    {% endblock %}
+    {# % endblock % #}
 </head>
 <body>
-    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="content">{# % block content % #}{# % endblock % #}</div>
     <br />
     <br />
     <br />
     <div id="footer">
-        {% block footer %}
+        {# % block footer % #}
           &copy; Copyright 2015 by <a href="http://domain.invalid/">you</a>.
-        {% endblock %}
+        {# % endblock % #}
     </div>
 </body>
 </html>
@@ -561,29 +561,29 @@ print(template.render(name=u'Петя'))
 Главная страница `templates/index.html` наследуется от `templates/base.html`
 
 ```python
-{% extends "base.html" %}
+{# % extends "base.html" % #}
 
-{% block title %}Index{% endblock %}
-{% block content %}
+{# % block title % #}Index{# % endblock % #}
+{# % block content % #}
     <h1>Simple Blog</h1>
     <a href="/article/add">Add article</a>
     <br />
     <br />
-    {% for article in articles %}
+    {# % for article in articles % #}
       ![pic]( article.id }} - (<a href="/article/{{ article.id )/delete">delete</a> |
       <a href="/article/![pic]( article.id )/edit">edit</a>)
       <a href="/article/![pic]( article.id }}">{{ article.title )</a><br />
-    {% endfor %}
-{% endblock %}
+    {# % endfor % #}
+{# % endblock % #}
 ```
 
 `templates/create.html` наследуется от базового шаблона.
 
 ```python
-{% extends "base.html" %}
+{# % extends "base.html" % #}
 
-{% block title %}Create{% endblock %}
-{% block content %}
+{# % block title % #}Create{# % endblock % #}
+{# % block content % #}
     <h1>Simple Blog -> EDIT</h1>
     <form action="" method="POST">
         Title:<br>
@@ -592,20 +592,20 @@ print(template.render(name=u'Петя'))
         <textarea name="content">![pic]( article.content )</textarea><br><br>
         <input type="submit" value="Submit">
     </form>
-{% endblock %}
+{# % endblock % #}
 ```
 
 `templates/read.html` наследуется от базового шаблона.
 
 ```python
-{% extends "base.html" %}
+{# % extends "base.html" % #}
 
-{% block title %}Index{% endblock %}
-{% block content %}
+{# % block title % #}Index{# % endblock % #}
+{# % block content % #}
     <h1><a href="/">Simple Blog</a> -> READ</h1>
     <h2>![pic]( article.title )</h2>
     ![pic](  article.content )
-{% endblock %}
+{# % endblock % #}
 ```
 
 `views.py` — окружение Jinja2.
