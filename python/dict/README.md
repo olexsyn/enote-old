@@ -227,9 +227,9 @@ _output:_
 ---
 ```
 <a name="create"></a>
-{ % include_relative create.md % }
+{# include_relative create.md #}
 
 <a name="access"></a>
-{ # include_relative access.md # }
+{# include_relative access.md #}
 ```
 
