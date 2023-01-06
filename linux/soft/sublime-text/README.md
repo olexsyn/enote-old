@@ -39,52 +39,15 @@
 
 ```json
 {
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/Color Highlighter/themes/ans-white.tmTheme",
-	"default_line_ending": "unix",
-	"detect_indentation": false,
-	"draw_white_space": "all",
-	"font_face": "JetBrains Mono",
-	// "font_face": "Droid Sans Mono Regular",
-	"font_size": 14,
-	"ignored_packages":
-	[
-		"Vintage",
-	],
-	"margin": 0,
-	"move_to_limit_on_up_down": true,
-	"predawn_findreplace_small": true,
-	"predawn_tabs_small": true,
-	"rulers":
-	[
-		79
-	],
-	"scroll_past_end": false,
-	"show_definitions": false,
-	"sidebar_size_13": true,
-	"tabs_small": true,
-	"theme": "Default Dark.sublime-theme",
-	"translate_tabs_to_spaces": false,
-	"trim_automatic_white_space": false,
-	"trim_trailing_white_space_on_save": true,
-}
-```
-
-## My settings 2
-
-```json
-{
     "bold_folder_labels": true,
     "default_line_ending": "unix",
     "detect_indentation": true,
-    "draw_white_space": "all",
     // "font_face": "Droid Sans Mono Regular",
     "font_face": "JetBrains Mono",
     "font_size": 13,
     "theme": "Default Dark.sublime-theme",
     "color_scheme": "Mariana.sublime-color-scheme",
-    "ignored_packages": ["Vintage",
-    ],
+    "ignored_packages": ["Vintage",],
 
     // Стовпці для відображення вертикальних лінійок
     "rulers": [80,],
@@ -113,6 +76,8 @@
 
     // Додає пробіли до першої відкритої дужки під час відступу. Потрібно ввімкнути auto_indent.
     "indent_to_bracket": true,
+
+    "draw_white_space": ["all_tabs", "selection"],
 
     // Керує способом малювання пробілу, що не є ASCII.
     // - "none": дослівно намалювати пробіл Юнікод, наприклад. приховування пробілів нульової ширини.
@@ -151,7 +116,8 @@
 }
 ```
 
-**Sublime keymap:**
+
+**Key Bindings:**
 
 ```json
 [
