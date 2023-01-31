@@ -5,7 +5,10 @@
 
 - [Строки в python 3: методы, функции, форматирование](https://pythonru.com/osnovy/stroki-python) :link: :onion:
 - [Форматування виводу](output-formatting)
-- [Список файлів у директорії](dir_file_list)
+- [Работа с файлами](files)
+  - [Список файлів у директорії](dir_file_list)
+- [Обработка форм](forms)
+  - [HTML-Form + AJAX](form_ajax)
 - [Форматирование строк с помощью format()](https://pythonru.com/osnovy/formatirovanie-v-python-s-pomoshhju-format) :link:
 - [10 примеров использования методов строк в python](https://pythonru.com/primery/10-primerov-ispolzovanija-metodov-stok-v-python) :link:
 - [Конвертация между байтами и строками](https://pyneng.readthedocs.io/ru/latest/book/16_unicode/python_3_convert.html) :link:
