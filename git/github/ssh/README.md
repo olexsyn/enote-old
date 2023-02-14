@@ -14,7 +14,8 @@
 
 
 ```
-'ssh-keygen -t ed25519 -C "nickname@example.com"' %}
+ssh-keygen -t ed25519 -C "nickname@example.com"
+```
 
 > Примітка. Якщо ви використовуєте застарілу систему, яка не підтримує алгоритм Ed25519, використовуйте:  
 > `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
@@ -23,7 +24,7 @@
 
 
 ```
-'ssh-keygen -t ed25519 -C "nickname@example.com"'
+ssh-keygen -t ed25519 -C "nickname@example.com"
 
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/user/.ssh/id_ed25519): /home/user/.ssh/nickname
@@ -74,27 +75,25 @@ cd path/to/REPOSITORY
 
 
 ```
-"git remote -v"
+git remote -v
 
-&gt; origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-&gt; origin  https://github.com/USERNAME/REPOSITORY.git (push)" %}
-
+> origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+> origin  https://github.com/USERNAME/REPOSITORY.git (push)
+```
 Змінюємо протокол:
 
 
 ```
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 ```
-
-
 Перевіряемо, що протокол змінився на **GIT**: `origin  git@github.com:`
 
-
 ```
-"git remote -v"
+git remote -v
 
-&gt; origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
-&gt; origin  git@github.com:USERNAME/REPOSITORY.git (push)" %}
+> origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+> origin  git@github.com:USERNAME/REPOSITORY.git (push)
+```
 
 Якщо раніше вводилася безпечна фраза-пароль, її може буде запитано під час команд `git pull`, `git push` і `git merge`.
 
@@ -109,12 +108,12 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 
 
 ```
-'eval "$(ssh-agent -s)"'
-out='&gt; Агент pid 59566' %}
+eval "$(ssh-agent -s)"
+```
+Агент pid 59566' 
 
 Додайте свій закритий (приватний) ключ SSH до ssh-agent:
 
-
 ```
-'ssh-add ~/.ssh/nickname' %}
-
+ssh-add ~/.ssh/nickname
+```
