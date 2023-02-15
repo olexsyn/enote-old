@@ -3,48 +3,6 @@
 `/usr/share/X11/xkb/symbols/ua`
 
 ```xml
-default  partial alphanumeric_keys
-xkb_symbols "unicode" {
-
-    include "ua(winkeys)"
-    name[Group1]= "Ukrainian";
-
-    key <TLDE> { [      apostrophe,      asciitilde,              U2019,           U0301  ] };  // Apostrophe and Stress symbol
-    key <AE01> { [               1,          exclam,        onesuperior                   ] };
-    key <AE02> { [               2,        quotedbl,        twosuperior                   ] };
-    key <AE03> { [               3,      numbersign,         numerosign,           U20B4  ] };  // Paragraph and Hryvnia sign
-    key <AE04> { [               4,       semicolon,             dollar,        EuroSign  ] };
-    key <AE05> { [               5,         percent,             degree                   ] };
-    key <AE06> { [               6,           colon,               less                   ] };
-    key <AE07> { [               7,        question,            greater                   ] };
-    key <AE08> { [               8,        asterisk, enfilledcircbullet                   ] };
-    key <AE09> { [               9,       parenleft,        bracketleft,       braceleft  ] };
-    key <AE10> { [               0,      parenright,       bracketright,      braceright  ] };
-    key <AE11> { [           minus,      underscore,             emdash,          endash  ] };
-    key <AE12> { [           equal,            plus,           notequal,       plusminus  ] };
-
-    key <AD03> { [      Cyrillic_u,          Cyrillic_U,       Byelorussian_shortu,       Byelorussian_SHORTU  ] };
-    key <AD04> { [     Cyrillic_ka,         Cyrillic_KA,                registered                             ] };  // Registered tm
-    key <AD05> { [     Cyrillic_ie,         Cyrillic_IE,               Cyrillic_io,               Cyrillic_IO  ] };  // е / ё
-    key <AD07> { [    Cyrillic_ghe,        Cyrillic_GHE, Ukrainian_ghe_with_upturn, Ukrainian_GHE_WITH_UPTURN  ] };  // г / ґ
-    key <AD12> { [    Ukrainian_yi,        Ukrainian_YI,         Cyrillic_hardsign,         Cyrillic_HARDSIGN  ] };  // ї / ъ
-    key <AC02> { [     Ukrainian_i,         Ukrainian_I,             Cyrillic_yeru,             Cyrillic_YERU  ] };  // і / ы
-    key <AC11> { [    Ukrainian_ie,        Ukrainian_IE,                Cyrillic_e,                Cyrillic_E  ] };  // є / э
-
-    key <BKSL> { [           slash,             bar,     backslash                        ] };
-
-    key <AB03> { [     Cyrillic_es,     Cyrillic_ES,      copyright                       ] };
-    key <AB06> { [     Cyrillic_te,     Cyrillic_TE,      trademark                       ] };
-    key <AB08> { [     Cyrillic_be,     Cyrillic_BE,  guillemotleft,  doublelowquotemark  ] };
-    key <AB09> { [     Cyrillic_yu,     Cyrillic_YU, guillemotright, leftdoublequotemark  ] };
-    key <AB10> { [          period,           comma,          slash,            ellipsis  ] };
-
-    include "level3(ralt_switch)"
-};
-```
-
-RU-UA
-```
 // Keyboard layouts for the Ukraine.
 // AEN <aen@logic.ru> & Leon Kanter <leon@geon.donetsk.ua>
 // last changes 2007/10/03 by Andriy Rysin <arysin@yahoo.com>
@@ -62,34 +20,35 @@ xkb_symbols "unicode" {
     include "ua(winkeys)"
     name[Group1]= "Ukrainian";
 
-    key <TLDE> { [     Cyrillic_io,     Cyrillic_IO,              U2019                   ] };  // е / ё / Apostrophe
-    key <AE01> { [               1,          exclam,         apostrophe                   ] };
-    key <AE02> { [               2,        quotedbl,                 at                   ] };
-    key <AE03> { [               3,      numerosign,         asciitilde                   ] };
-    key <AE04> { [               4,       semicolon,             dollar,        EuroSign  ] };
-    key <AE05> { [               5,         percent,             degree                   ] };
-    key <AE06> { [               6,           colon,               less                   ] };
-    key <AE07> { [               7,        question,            greater,           U20B4  ] };  // Hryvnia sign
-    key <AE08> { [               8,        asterisk, enfilledcircbullet                   ] };
-    key <AE09> { [               9,       parenleft,        bracketleft,       braceleft  ] };
-    key <AE10> { [               0,      parenright,       bracketright,      braceright  ] };
-    key <AE11> { [           minus,      underscore,             emdash,          endash  ] };
-    key <AE12> { [           equal,            plus,           notequal,       plusminus  ] };
+    key <TLDE> { [      apostrophe,      asciitilde,           U2019,              U0301  ] };  // ' ~ ’  ́
+    key <AE01> { [               1,          exclam,           U00BD,        onesuperior  ] };  // 1 ! ½ ¹
+    key <AE02> { [               2,        quotedbl,        EuroSign,        twosuperior  ] };  // 2 " € ²
+    key <AE03> { [               3,      numbersign,      numerosign,              U00B3  ] };  // 3 # № ³
+    key <AE04> { [               4,       semicolon,          dollar,              U00A7  ] };  // 4 ; $ §
+    key <AE05> { [               5,         percent,           U20B4,             degree  ] };  // 5 % ₴ °
+    key <AE06> { [               6,           colon,           U00F7,              U00BC  ] };  // 6 : ÷ ¼
+    key <AE07> { [               7,        question,           U00A3,              U00BE  ] };  // 7 ? £ ¾
+    key <AE08> { [               8,        asterisk,           U00D7, enfilledcircbullet  ] };  // 8 * × •
+    key <AE09> { [               9,       parenleft,     bracketleft,          braceleft  ] };  // 9 ( [ {
+    key <AE10> { [               0,      parenright,    bracketright,         braceright  ] };  // 0 ) ] }
+    key <AE11> { [           minus,      underscore,          emdash,             endash  ] };  // - _ — –
+    key <AE12> { [           equal,            plus,        notequal,          plusminus  ] };  // = + ≠ ±
 
-    key <AD03> { [        Cyrillic_u,          Cyrillic_U,        Byelorussian_shortu,       Byelorussian_SHORTU  ] };
-    key <AD04> { [       Cyrillic_ka,         Cyrillic_KA,                 registered                             ] };  // Registered tm
-    key <AD07> { [      Cyrillic_ghe,        Cyrillic_GHE,  Ukrainian_ghe_with_upturn, Ukrainian_GHE_WITH_UPTURN  ] };  // г / ґ
-    key <AD12> { [ Cyrillic_hardsign,   Cyrillic_HARDSIGN,               Ukrainian_yi,              Ukrainian_YI  ] };  // ї / ъ
-    key <AC02> { [     Cyrillic_yeru,       Cyrillic_YERU,                Ukrainian_i,               Ukrainian_I  ] };  // і / ы
-    key <AC11> { [        Cyrillic_e,          Cyrillic_E,               Ukrainian_ie,              Ukrainian_IE  ] };  // є / э
+    key <AD03> { [      Cyrillic_u,      Cyrillic_U,       Byelorussian_shortu,       Byelorussian_SHORTU  ] };  // у У ў Ў
+    key <AD04> { [     Cyrillic_ka,     Cyrillic_KA,                registered                             ] };  // к К ®
+    key <AD05> { [     Cyrillic_ie,     Cyrillic_IE,               Cyrillic_io,               Cyrillic_IO  ] };  // е Е ё Ё
+    key <AD07> { [    Cyrillic_ghe,    Cyrillic_GHE, Ukrainian_ghe_with_upturn, Ukrainian_GHE_WITH_UPTURN  ] };  // г Г ґ Ґ
+    key <AD12> { [    Ukrainian_yi,    Ukrainian_YI,         Cyrillic_hardsign,         Cyrillic_HARDSIGN  ] };  // ї Ї ъ Ъ
+    key <AC02> { [     Ukrainian_i,     Ukrainian_I,             Cyrillic_yeru,             Cyrillic_YERU  ] };  // і І ы Ы
+    key <AC11> { [    Ukrainian_ie,    Ukrainian_IE,                Cyrillic_e,                Cyrillic_E  ] };  // є Є э Э
 
-    key <BKSL> { [           slash,             bar,     backslash                        ] };
+    key <BKSL> { [           slash,             bar,       backslash            ] };  // / | \
 
-    key <AB03> { [     Cyrillic_es,     Cyrillic_ES,      copyright                       ] };
-    key <AB06> { [     Cyrillic_te,     Cyrillic_TE,      trademark                       ] };
-    key <AB08> { [     Cyrillic_be,     Cyrillic_BE,  guillemotleft,  doublelowquotemark  ] };
-    key <AB09> { [     Cyrillic_yu,     Cyrillic_YU, guillemotright, leftdoublequotemark  ] };
-    key <AB10> { [          period,           comma,          slash,            ellipsis  ] };
+    key <AB03> { [     Cyrillic_es,     Cyrillic_ES,       copyright            ] };  // с С ©
+    key <AB06> { [     Cyrillic_te,     Cyrillic_TE,       trademark            ] };  // т Т ™
+    key <AB08> { [     Cyrillic_be,     Cyrillic_BE,   guillemotleft,      less ] };  // б Б « <
+    key <AB09> { [     Cyrillic_yu,     Cyrillic_YU,  guillemotright,   greater ] };  // ю Ю » >
+    key <AB10> { [          period,           comma,        ellipsis,     slash ] };  // . , … /
 
     include "level3(ralt_switch)"
 };
@@ -159,7 +118,7 @@ xkb_symbols "winkeys" {
     include "ua(legacy)"
     name[Group1]= "Ukrainian (Windows)";
 
-    key <AE03> { [               3,      numerosign  ] };
+    key <AE03> { [               3,      numbersign  ] };
     key <AE04> { [               4,       semicolon  ] };
     key <AE05> { [               5,         percent  ] };
     key <AE06> { [               6,           colon  ] };
