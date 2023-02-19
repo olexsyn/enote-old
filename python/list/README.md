@@ -1,4 +1,6 @@
-# list
+# list & tuple
+
+## list
 
 ```python
 mylist = ["apple", "banana", "cherry"]  # ['apple', 'banana', 'cherry']
