@@ -33,12 +33,12 @@ x = "-".join(my_tuple)
 print(x)          # 'John-Peter-Vicky'
 ```
 
-
 ## Списки
 
-- [Функции `any` и `all`](list/any_all/)
-- [Функции `sum`, `min` и `max`](list/sum_min_max/)
-- [Метод списка `list.sort()` и функция `sorted()`](list/sort_sorted)
+- [list()](list)
+- [Функции `any` и `all`](list_any_all)
+- [Функции `sum`, `min` и `max`](list_sum_min_max)
+- [Метод списка `list.sort()` и функция `sorted()`](list_sort_sorted)
 
 ## Бібліотеки
 - [datetime](datetime)
