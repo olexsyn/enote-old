@@ -40,7 +40,17 @@ day = '5'
 print(f'{year}-{mon:02}-{day:02}')  # '2022-90-50' !!!!
 ```
 
-див.також: `string.zfill()` - доповнює строку нулями зліва.
+## Для строк: `string.zfill()` - доповнює строку нулями зліва.
+
+```python
+a = "hello"
+b = "welcome to the jungle"
+c = "10.000"
+
+print(a.zfill(10))  # '00000hello'
+print(b.zfill(10))  # 'welcome to the jungle'
+print(c.zfill(10))  # '000010.000'
+```
 
 ## Более подробно:
 
