@@ -192,4 +192,4 @@ FLUSH PRIVILEGES;
 ## Див також
 
 - [Права для пользователей]({{ site.baseurl}}/mysql/privileges)
-- {% include a.htm url="https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user" text="Создание пользователей MySQL/MariaDB и предоставление прав доступа" %}
+- [Создание пользователей MySQL/MariaDB и предоставление прав доступа](https://www.dmosk.ru/miniinstruktions.php?mini=mysql-user)
