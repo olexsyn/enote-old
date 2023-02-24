@@ -10,46 +10,47 @@
 - [Проблема корректного отображения UTF8 в CGI-скриптах](cgi-utf-fix)
 - [Apache і Мирохост](mirohost)
 
-## Версия, стоп, старт, рестарт
-
+### Версія
 
 ```
-"/usr/sbin/apache2 -v"
+/usr/sbin/apache2 -v
 
 Server version: Apache/2.4.29 (Ubuntu)
 Server built:   2020-03-13T12:26:16"
-%}
+```
 
+### Стан
 
 ```
 service apache2 stаtus
 ```
 
-
+### Стоп, старт, рестарт
 
 ```
 sudo service apache2 stop|start|restart
 ```
 
-
-а также, в некоторых дистрибутивах Linux:
-
+а також, в інших дистрибутивах Linux:
 
 ```
-"sudo systemctl stop|start|restart httpd.service
-systemctl status httpd" %}
-
+systemctl status httpd
+sudo systemctl stop|start|restart httpd.service
+```
 
 ```
-"/etc/init.d/apache2 status
-/etc/init.d/apache2 stop|start|restart|reload|force-reload" %}
+/etc/init.d/apache2 status
+/etc/init.d/apache2 stop|start|restart|reload|force-reload
 ```
+
+Перевірка конфігурації
 
 ```
 sudo apache2ctl configtest
 ```
 
-выводит ошибку в конфиге Apache. Помогает понять, где напортачено в файлах конфигурации
+Допомагає знайти помилку у файлах конфігурації
+
 
 > <span class="warn">!</span> В случае появления сообщения  
 > `AH00558: httpd: Could not reliably determine the server's fully qualified`  
