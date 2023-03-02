@@ -1,10 +1,10 @@
 # Создание самоподписанных сертификатов SSL для Apache в (Debian based) Linux
 
-На основе {% include a.htm url="https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04-ru" text="digitalocean.com Tutorials" %}
+На основе [digitalocean.com Tutorials](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04-ru)
 
 Самоподписанный сертификат шифрует данные, которыми ваш сервер обменивается с любыми клиентами. Однако поскольку он не подписан доверенным центром сертификации из числа встроенных в браузеры, пользователи не могут использовать этот сертификат для автоматической проверки подлинности вашего сервера.
 
-Самоподписанный сертификат полезен в ситуациях, когда у вашего сервера нет доменного имени, а также в случаях, когда шифрованный веб-интерфейс **НЕ** предназначен для взаимодействия с пользователями (например, локальная разработка). Если у вас есть доменное имя, в большинстве случае будет полезнее использовать сертификат, подписанный центром сертификации. Например, {% include a.htm url="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04" text="здесь" %} вы можете узнать, как создать бесплатный доверенный сертификат с помощью проекта **Let’s Encrypt**.
+Самоподписанный сертификат полезен в ситуациях, когда у вашего сервера нет доменного имени, а также в случаях, когда шифрованный веб-интерфейс **НЕ** предназначен для взаимодействия с пользователями (например, локальная разработка). Если у вас есть доменное имя, в большинстве случае будет полезнее использовать сертификат, подписанный центром сертификации. Например, [здесь](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04) вы можете узнать, как создать бесплатный доверенный сертификат с помощью проекта **Let’s Encrypt**.
 
 # Оглавление
 
@@ -23,7 +23,7 @@
 <a name="ssl_create"></a>
 # Шаг 1 – Создание сертификата SSL
 
-<span class="info">i</span> <small>В качестве примера, я создаю самоподписанный сертификат для локальной версии проекта Auto.Kazka. Я планирую подключить и некоторые другие свои виртуальные хосты через https, поэтому, в данной инструкции ключи я называю по имени проекта: `apache-autokazka`. В оригинальной статье (ссылка вверху статьи) речь идет только об одном хосте.</small>
+В качестве примера, я создаю самоподписанный сертификат для локальной версии проекта My.Site. Я планирую подключить и некоторые другие свои виртуальные хосты через https, поэтому, в данной инструкции ключи я называю по имени проекта: `apache-mysite`. В оригинальной статье (ссылка вверху статьи) речь идет только об одном хосте.
 
 Протоколы TLS и SSL используют сочетание открытого сертификата и закрытого ключа. Секретный ключ SSL хранится на сервере. Он используется для шифрования отправляемых на клиентские системы данных. Сертификат SSL находится в открытом доступе для всех, кто запрашивает этот контент. Его можно использовать для расшифровки контента, подписанного соответствующим ключом SSL.
 
@@ -31,7 +31,7 @@
 
 
 ```
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-autokazka.key -out /etc/ssl/certs/apache-autokazka.crt
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-mysite.key -out /etc/ssl/certs/apache-mysite.crt
 ```
 
 
@@ -54,7 +54,7 @@ file:../crypto/rand/randfile.c:88:Filename=/home/olex/.rnd
 Generating a RSA private key
 ......................................+++++
 ....+++++
-writing new private key to '/etc/ssl/private/apache-autokazka.key'
+writing new private key to '/etc/ssl/private/apache-mysite.key'
 -----
 You are about to be asked to enter information that will be incorporated
 into your certificate request.
@@ -74,15 +74,15 @@ If you enter '.', the field will be left blank.
 Country Name (2 letter code) [AU]:UA
 State or Province Name (full name) [Some-State]:Kyiv Obl.
 Locality Name (eg, city) []:Kyiv
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:Auto.Kazka  
-Organizational Unit Name (eg, section) []:OlexSyn        
-Common Name (e.g. server FQDN or YOUR name) []:auto.kazka.org.ua.loc
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:My.Site  
+Organizational Unit Name (eg, section) []:UserName        
+Common Name (e.g. server FQDN or YOUR name) []:mysite.org.ua.loc
 Email Address []:myemail@gmail.com
 ```
 
 Оба созданных вами файла будут помещены в соответствующие подкаталоги в каталоге /etc/ssl:
-- `/etc/ssl/private/apache-autokazka.key`  (эта директория закрыта, зайти можно только под root'ом)
-- `/etc/ssl/certs/apache-autokazka.crt`  (а в этой вообще целая свалка различных сертификатов `.pem`!.. Серт.центры?)
+- `/etc/ssl/private/apache-mysite.key`  (эта директория закрыта, зайти можно только под root'ом)
+- `/etc/ssl/certs/apache-mysite.crt`  (а в этой вообще целая свалка различных сертификатов `.pem`!.. Серт.центры?)
 
 <a name="apache_config"></a>
 ## Шаг 2 — Настройка Apache для использования SSL
@@ -136,23 +136,23 @@ SSLSessionTickets Off
 <a name="virtual_host"></a>
 ### Изменение файла виртуального хоста Apache SSL по умолчанию
 
-Теперь изменим конфигурацию хоста проекта `/etc/apache2/sites-available/auto_kazka_org_ua.conf`. Строки, добавленные к стандартной конфигурации для работы ssl я пометил как `# ssl`:
+Теперь изменим конфигурацию хоста проекта `/etc/apache2/sites-available/my_site_org_ua.conf`. Строки, добавленные к стандартной конфигурации для работы ssl я пометил как `# ssl`:
 
 ```apache
 <IfModule mod_ssl.c>                                                   # ssl
     <VirtualHost 127.0.1.77:443>                                       # ssl Внимание! Здесь порт `:80` надо заменить на `:443`!
-        ServerName auto.kazka.org.ua.loc
-        DocumentRoot /home/olex/www/kazka/auto.kazka.org.ua
+        ServerName mysite.org.ua.loc
+        DocumentRoot /home/olex/www/mysite/mysite.org.ua
 
         SSLEngine on                                                   # ssl
-        SSLCertificateFile     /etc/ssl/certs/apache-autokazka.crt     # ssl
-        SSLCertificateKeyFile  /etc/ssl/private/apache-autokazka.key   # ssl
+        SSLCertificateFile     /etc/ssl/certs/apache-mysite.crt     # ssl
+        SSLCertificateKeyFile  /etc/ssl/private/apache-mysite.key   # ssl
 
         <FilesMatch "\.(py|html|htm|css|js)$">                         # ssl  # все? а картинки?
             SSLOptions +StdEnvVars                                     # ssl
         </FilesMatch>                                                  # ssl
 
-        <Directory /home/olex/www/kazka/auto.kazka.org.ua/>
+        <Directory /home/olex/www/mysite/mysite.org.ua/>
             Options +Includes
             AddType text/html .htm
             AddOutputFilter INCLUDES .htm
@@ -160,18 +160,18 @@ SSLSessionTickets Off
             Require all granted
         </Directory>
 
-        ScriptAlias /cgi-bin/ /home/olex/www/kazka/cgi-bin/
-        <Directory "/home/olex/www/kazka/cgi-bin">
+        ScriptAlias /cgi-bin/ /home/olex/www/mysite/cgi-bin/
+        <Directory "/home/olex/www/mysite/cgi-bin">
             AllowOverride None
             Options +ExecCGI -MultiViews
             Require all granted
-            # see https://olexsyn.github.io/e-note/apache/cgi-utf-fix/
+            # see https://username.github.io/e-note/apache/cgi-utf-fix/
             PassEnv LANG en_US.UTF-8
             SSLOptions +StdEnvVars                                     # ssl
         </Directory>
 
-        ErrorLog /home/olex/www/__logs/kazka_auto/error.log
-        CustomLog /home/olex/www/__logs/kazka_auto/access.log combined
+        ErrorLog /home/olex/www/__logs/my_site/error.log
+        CustomLog /home/olex/www/__logs/my_site/access.log combined
 
     </VirtualHost>
 </IfModule>                                                            # ssl
@@ -206,7 +206,7 @@ sudo a2enmod headers
 
 ```
 "sudo a2enconf ssl-params
-sudo a2ensite auto_kazka_org_ua
+sudo a2ensite my_site_org_ua
 ```
  
 Мы активировали наш сайт и все необходимые модули. Теперь нам нужно проверить наши файлы на наличие ошибок в синтаксисе. Для этого можно ввести следующую команду:
@@ -234,7 +234,7 @@ sudo systemctl restart apache2
 
 Откройте браузер и введите https:// и доменное имя или IP-адрес вашего сервера в адресную панель:
 
-<https://auto.kazka.org.ua.loc>
+<https://mysite.org.ua.loc>
 
 <a name="browser_features"></a>
 ### Особенности поведения браузера в случае с самоподписанным сертификатом]
